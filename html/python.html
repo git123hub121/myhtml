@@ -1,0 +1,2684 @@
+<!DOCTYPE html>
+<!--  class="no-ie" style="overflow:hidden;" -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/templatemo-style.css">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="css/style_p.css"> <!-- Resource style -->
+    <link href="css/ax1.css" rel="stylesheet" type="text/css" ><!-- 控制弹窗样式 -->
+    <!-- 控制背景切换 -->
+    <script src="https://www.jq22.com/demo/modernizrTabs20161126/js/modernizr.js"></script> <!-- Modernizr -->
+    <script src="https://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+    <script src="https://www.jq22.com/demo/modernizrTabs20161126/js/main.js"></script> <!-- Resource jQuery -->
+    <script src="https://www.jq22.com/demo/jquery-qh-150323225953/jquery-1.4.4.js"></script><!-- 控制左右轮换 -->
+    <script src="https://libs.baidu.com/jquery/1.11.3/jquery.min.js"></script><!-- 常用模块css特效 -->
+    <script src="js/jquery-1.10.2.min.js"></script><!-- 控制弹窗显示 -->
+    <!-- 控制背景切换 -->
+    <script type="text/javascript" language="javascript">
+        function secondToDate(second) {
+            if (!second) {
+                return 0;
+            }
+            var time = new Array(0, 0, 0, 0, 0);
+            if (second >= 365 * 24 * 3600) {//计算年
+                time[0] = parseInt(second / (365 * 24 * 3600));
+                second %= 365 * 24 * 3600;
+            }
+            if (second >= 24 * 3600) {//计算天
+                time[1] = parseInt(second / (24 * 3600));
+                second %= 24 * 3600;
+            }
+            if (second >= 3600) {//计算时
+                time[2] = parseInt(second / 3600);
+                second %= 3600;
+            }
+            if (second >= 60) {//计算分
+                time[3] = parseInt(second / 60);
+                second %= 60;
+            }
+            if (second > 0) {//计算秒
+                time[4] = second;
+            }
+            return time;
+        }
+        function setTime() {
+            var create_time = Math.round(new Date(Date.UTC(2021, 3, 25, 0, 0, 0)).getTime() / 1000);//设置起始时间为2017年1月1日0点整，注意月份取值是0-11。
+            var timestamp = Math.round((new Date().getTime() + 8 * 60 * 60 * 1000) / 1000);
+            currentTime = secondToDate((timestamp - create_time));
+            currentTimeHtml = currentTime[0] + '年' + currentTime[1] + '天' + currentTime[2] + '时' + currentTime[3] + '分' + currentTime[4] + '秒';
+            document.getElementById("show_time").innerHTML = currentTimeHtml;
+        }
+        setInterval(setTime, 1000);
+    </script>
+    <!-- 常用模块 -->
+    <style>
+        body {
+            font-family: "microsoft yahei";
+        }
+    </style>
+</head>
+
+<body style="overflow:-Scroll;overflow-y:hidden">
+
+    <nav class="navbar navbar-expand-lg" style="width: 100%; height: 100%;">
+        <div class="container-fluid"
+            style="width: 100%; height: 60px;background-color: white;position: fixed;z-index: 999;margin: 0;text-align: center;padding-top: 20px;">
+            <!-- style="position: fixed;" -->
+            <a target="_blank" target="_blank" class="navbar-brand" href="index.html">
+                <i class="fas fa-film mr-2"></i>
+                My Favorites
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
+                    <li class="nav-item"> <a target="_blank" target="_blank" class="nav-link nav-link-1 active"
+                            aria-current="page" href="index.html">网址导航</a></li>
+                    <li class="nav-item"> <a target="_blank" target="_blank" class="nav-link nav-link-2"
+                            href="videos.html">教学领域</a>
+                    </li>
+                    <li class="nav-item"> <a target="_blank" target="_blank" class="nav-link nav-link-3"
+                            href="about.html">企业发展史</a>
+                    </li>
+                    <li class="nav-item"> <a target="_blank" target="_blank" class="nav-link nav-link-4"
+                            href="contact.html">热度名词</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container-fluid tm-container-content tm-mt-60p big1">
+        <div style="background: red;">
+            <h2 class="col-12 tm-text-primary" style="float: left;">Python</h2>
+            <div class="r_bg" style="float: right;">
+        </div>
+
+        <div style="width: 100%;height: 100%;">
+            <div
+                style="border-top: 1px rgba(203, 196, 130, 0.06) solid;border-left: 1px rgba(203, 196, 130, 0.06) solid;float: left;width: 76%;height: 100%;">
+                <div class="cd-tabs" style="margin: 0;">
+                    <nav>
+                        <ul class="cd-tabs-navigation">
+                            <li><a data-content="inbox" class="selected" href="#0" style="font-size: 12px;">在线学习</a>
+                            </li>
+                            <li><a data-content="new" href="#0">优质公众号</a></li>
+                            <li><a data-content="gallery" href="#0">精选文章</a></li>
+                            <li><a data-content="store" href="#0">常用模块</a></li>
+                            <li><a data-content="settings" href="#0">Github</a></li>
+                            <li><a data-content="trash" href="#0">数据源</a></li>
+                        </ul> <!-- cd-tabs-navigation -->
+                    </nav>
+
+                    <ul class="cd-tabs-content">
+                        <!-- 在线学习 -->
+                        <li data-content="inbox" class="selected">
+                            <!-- 根据自己的需求进行调节，应该是设置不合理所导致的  一行: height: 150px;-->
+                            <div class="s_box">
+                                <div class="box1">
+                                    <h5 class="h_c">Python学习网站</h5>
+                                    <div class="content">
+                                        <span style="font-size: 14px;"><i class="fa fa-plane"></i><a target="_blank"
+                                                href="https://www.aidaxue.com/" class="span_a"
+                                                style="margin-left: 10px;">讯飞Al大学
+                                            </a><br><i>Al在线学习平台</i></span>
+                                    </div>
+                                    <div class="content">
+                                        <span style="font-size: 14px;"><i class="fa fa-bookmark"></i><a target="_blank"
+                                                href="https://www.lanqiao.cn/" class="span_a"
+                                                style="margin-left: 10px;">蓝桥云课
+                                            </a><br><i>连接高校与企业</i></span>
+                                    </div>
+                                    <div class="content">
+                                        <span style="font-size: 14px;"><i class="fa fa-meh"></i><a target="_blank"
+                                                href="https://python123.io/" class="span_a"
+                                                style="margin-left: 10px;">Python123
+                                            </a><br><i><a target="_blank"
+                                                    href="https://python123.io/python/muxiatong/5dad2c8ba6af680a649f49ea">木下瞳的爬虫专栏</a></i></span>
+                                    </div>
+                                    <div class="content">
+                                        <span style="font-size: 14px;"><i class="fa fa-space-shuttle"></i><a
+                                                target="_blank"
+                                                href="https://www.pypandas.cn/awesome/#%E7%B2%BE%E9%80%89%E6%96%87%E7%AB%A0"
+                                                class="span_a" style="margin-left: 10px;">Pandas中文网
+                                            </a><br><i>官方中文文档</i></span>
+                                    </div>
+                                    <div class="content">
+                                        <span style="font-size: 14px;"><i class="fa fa-film"></i><a target="_blank"
+                                                href="http://amueller.github.io/word_cloud/index.html" class="span_a"
+                                                style="margin-left: 10px;">WordCloud文档
+                                            </a><br><i>官方英文文档</i></span>
+                                    </div>
+                                    <div class="content">
+                                        <span style="font-size: 14px;"><i class="fa fa-book"></i><a target="_blank"
+                                                href="http://www.justdopython.com" class="span_a"
+                                                style="margin-left: 10px;">Python技术
+                                            </a><br><i>高质量原创Py文章</i></span>
+                                    </div>
+                                    <div class="content">
+                                        <span style="font-size: 14px;"><i class="fa fa-bars"></i><a target="_blank"
+                                                href="http://bk.chenlove.cn/" class="span_a"
+                                                style="margin-left: 10px;">Python研究者
+                                            </a><br><i>各种福利软件资源</i></span>
+                                    </div>
+                                    <div class="content">
+                                        <span style="font-size: 14px;"><i class="fa fa-car"></i><a target="_blank"
+                                                href="https://pythondict.com/" class="span_a"
+                                                style="margin-left: 10px;">Python实用宝典
+                                            </a><br><i>Python资源实用宝典</i></span>
+                                    </div>
+                                    <div class="content">
+                                        <span style="font-size: 14px;"><i class="fa fa-bus"></i><a target="_blank"
+                                                href="https://mp.weixin.qq.com/mp/homepage?__biz=MzI5OTk5OTM2Mw==&hid=16&sn=c75c9a6da01fd906d37da5c778db0502"
+                                                class="span_a" style="margin-left: 10px;">Python数据分析
+                                            </a><br><i>数据科学分析可视化</i></span>
+                                    </div>
+                                </div>
+                                <div class="box1">
+                                    <h5 class="h_c">Python-哔哩哔哩</h5>
+                                    <div class="bl content">
+                                        <span style="font-size: 14px;"><i class=""></i><a target="_blank"
+                                                href="https://www.bilibili.com/video/BV17Z4y1V7va?from=search&seid=8211605210531918495"
+                                                class="span_a"
+                                                style="margin-left: 10px;">2020黑马最新Python全套教程，零基础到进阶就业【完整版】
+                                            </a><br><i></i></span>
+                                    </div>
+                                    <div class="bl content">
+                                        <span style="font-size: 14px;"><i class=""></i><a target="_blank"
+                                                href="https://www.bilibili.com/video/BV1ex411x7Em?p=1" class="span_a"
+                                                style="margin-left: 10px;">黑马程序员Python教程_600集Python从入门到精通教程（懂中文就能学会）
+                                            </a><br><i></i></span>
+                                    </div>
+                                    <div class="bl content">
+                                        <span style="font-size: 14px;"><i class=""></i><a target="_blank"
+                                                href="https://www.bilibili.com/video/BV1Ni4y1t7tf" class="span_a"
+                                                style="margin-left: 10px;">【Pandas】 数据分析 & Excel办公自动化 超详细动画可视化讲解
+                                            </a><br><i></i></span>
+                                    </div>
+                                    <div class="bl content">
+                                        <span style="font-size: 14px;"><i class=""></i><a target="_blank" href=""
+                                                class="span_a" style="margin-left: 10px;">更新中...
+                                            </a><br><i></i></span>
+                                    </div>
+                                </div>
+                                <div class="box1">
+                                    <h5 class="h_c">学习轨迹</h5>
+                                    <div class="bl content">
+                                        <span style="font-size: 14px;"><i class=""></i><a target="_blank"
+                                                href="https://www.aidaxue.com/course/courseDetail?id=580" class="span_a"
+                                                style="margin-left: 10px;">python爬虫和数据可视化&nbsp;&nbsp;&nbsp;&nbsp;
+                                            </a><i>——IT私塾</i></span>
+                                    </div>
+                                    <div class="bl content">
+                                        <span style="font-size: 14px;"><i class=""></i><a target="_blank"
+                                                href="weixin.html" class="span_a" style="margin-left: 10px;">微信公众号文章
+                                            </a><br><i></i></span>
+                                    </div>
+                                </div>
+                                <div class="box2" style="">
+                                    <h5 class="h_c">Python学习资料</h5>
+                                    <div class="content">
+                                        <span style="font-size: 14px;"><i class=""></i><a
+                                                target="_blank"
+                                                href="pdf/用实战玩转Pandas数据分析.pdf"
+                                                class="span_a" style="margin-left: 10px;"><marquee behavior="" direction="">用实战玩转Pandas数据分析.pdf</marquee>
+                                            </a></span>
+                                    </div>
+                                    <div class="content">
+                                        <span style="font-size: 14px;"><i class=""></i><a target="_blank"
+                                                href="pdf/Python知识手册-V3.0.pdf" class="span_a"
+                                                style="margin-left: 10px;">Python知识手册-V3.0.pdf
+                                            </a></span>
+                                    </div>
+                                    <div class="content">
+                                        <span style="font-size: 14px;"><i class=""></i><a target="_blank"
+                                                href="pdf/《Python进阶》.pdf" class="span_a"
+                                                style="margin-left: 10px;">《Python进阶》.pdf
+                                            </a></span>
+                                    </div>
+                                    <div class="content">
+                                        <span style="font-size: 14px;"><i class=""></i><a target="_blank"
+                                                href="pdf/python操作excel、word、pdf.pdf" class="span_a"
+                                                style="margin-left: 10px;"><marquee behavior="" direction="">python操作excel、word、pdf.pdf</marquee>
+                                            </a></span>
+                                    </div>
+                                    <div class="content">
+                                        <span style="font-size: 14px;"><i class=""></i><a target="_blank"
+                                                href="pdf/笨办法学Python.pdf" class="span_a"
+                                                style="margin-left: 10px;">笨办法学Python.pdf
+                                            </a></span>
+                                    </div>
+                                    <div class="content">
+                                        <span style="font-size: 14px;"><i class=""></i><a target="_blank"
+                                                href="pdf/GitHub入门与实践.pdf" class="span_a"
+                                                style="margin-left: 10px;">GitHub入门与实践.pdf
+                                            </a></span>
+                                    </div>
+                                    <div class="content">
+                                    <span style="font-size: 14px;"><i class=""></i><a target="_blank"
+                                            href="pdf/PYTHON数据可视化编程实战.pdf" class="span_a"
+                                            style="margin-left: 10px;"><marquee behavior="" direction="">PYTHON数据可视化编程实战.pdf</marquee>
+                                        </a></span>
+                                    </div>
+                                    <div class="content">
+                                        <span style="font-size: 14px;"><i class=""></i><a target="_blank"
+                                                href="pdf/简明Python教程.pdf" class="span_a"
+                                                style="margin-left: 10px;">简明Python教程.pdf
+                                            </a></span>
+                                    </div>
+                                    <div class="content">
+                                        <span style="font-size: 14px;"><i class=""></i><a target="_blank"
+                                                href="pdf/Python 数据可视化.pdf" class="span_a"
+                                                style="margin-left: 10px;">Python数据可视化.pdf
+                                            </a></span>
+                                    </div>
+                                    <div class="content">
+                                    <span style="font-size: 14px;"><i class=""></i><a target="_blank"
+                                            href="pdf/Python数据可视化之matplotlib实践.pdf" class="span_a"
+                                            style="margin-left: 10px;"><marquee behavior="" direction="">Python数据可视化之matplotlib实践.pdf</marquee>
+                                        </a></span>
+                                    </div>
+                                    <div class="content">
+                                    <span style="font-size: 14px;"><i class=""></i><a target="_blank"
+                                        href="pdf/正则表达式.pdf" class="span_a"
+                                        style="margin-left: 10px;">正则表达式.pdf</a></span>
+                                    </div>
+                                    
+                            </div>
+                        </li>
+                        <!-- style="padding: 0;" 可取消li的右移 优质公众号-->
+                        <li data-content="new">
+                            <div class="show box" style="height: 468px;" id="cut">
+                                <!-- margin-top: -10px; <img src="img/fnst.png" alt="" width="20px" height="20px"> 每个十个记录-->
+                                <section style="width: 100%;height: 100%;" class="block">
+                                    <h5 class="h_c">Python领域<span
+                                            style="font-size: 12px;color: gray;padding-left: 30px;">Python 上</span>
+                                        <span id="show_time"
+                                            style="float: right;display: inline-block;margin-right: 50px;"></span>
+                                    </h5>
+                                    <div class="content" style="color: #009999;">
+                                        <div class="gzhx">优质公众号</div>
+                                        <div class="gzhx1">微信号</div>
+                                        <div class="gzhx2">功能介绍</div>
+                                    </div>
+                                    <div class="content">
+                                        <div class="gzhx">法纳斯特
+                                            <span class="xx"><img src="img/fnst.jpg" alt=""></span>
+                                        </div>
+                                        <div class="gzhx1">walker398</div>
+                                        <div class="gzhx2">分享学习Python爬虫、数据分析、数据挖掘的点滴
+                                        </div>
+                                    </div>
+                                    <div class="content">
+                                        <div class="get_bj gzhx">Python研究者
+                                            <span class="xx"><img src="img/pyjz.jpg" alt=""></span>
+                                        </div>
+                                        <div class="gzhx1">PythonYjz</div>
+                                        <!-- 分享Python相关的技术文章、工具资源、视频教程、学习资料 -->
+                                        <div class="gzhx2">教你如何学Python，专注于Python入门与进阶、爬虫、数据分析挖掘、数据可视化</div>
+                                    </div>
+                                    <div class="content">
+                                        <div class="gzhx">Python数据科学
+                                            <span class="xx"><img src="img/sjkx.jpg" alt=""></span>
+                                        </div>
+                                        <div class="gzhx1">PyDataScience</div>
+                                        <div class="gzhx2">专攻「数据科学」，文章涵盖数据分析，数据挖掘，机器学习，分享数据挖掘实战项目以及学习资源</div>
+                                    </div>
+                                    <div class="content">
+                                        <div class="gzhx">Python程序员
+                                            <span class="xx"><img src="img/cxy.jpg" alt=""></span>
+                                        </div>
+                                        <div class="gzhx1">pythonbuluo</div>
+                                        <div class="gzhx2">专注Python领域的技术社区。每天推送优质的技术文章</div>
+                                    </div>
+                                    <div class="content">
+                                        <div class="gzhx">CDA数据分析师
+                                            <span class="xx"><img src="img/cda.jpg" alt=""></span>
+                                        </div>
+                                        <div class="gzhx1">cdacdacda</div>
+                                        <div class="gzhx2">CDA数据分析师品牌官方微信，开放、创新、分享</div>
+                                    </div>
+                                    <div class="content">
+                                        <div class="gzhx">早起Python
+                                            <span class="xx"><img src="img/zqp.jpg" alt=""></span>
+                                        </div>
+                                        <div class="gzhx1">Zaoqi_Python</div>
+                                        <div class="gzhx2">点击领取Python数据分析200题</div>
+                                    </div>
+                                    <div class="content">
+                                        <div class="gzhx">Python数据之道
+                                            <span class="xx"><img src="img/sjzd.jpg" alt=""></span>
+                                        </div>
+                                        <div class="gzhx1">PyDataLab</div>
+                                        <!-- 「Python数据之道」秉承"让数据更有价值"的理念​， -->
+                                        <div class="gzhx2">聚焦于 Python 数据分析、数据可视化、AI、机器学习、深度学习等领域,秉承让数据更有价值的理念​</div>
+                                    </div>
+                                    <div class="content">
+                                        <div class="gzhx">Crossin的编程教室
+                                            <span class="xx"><img src="img/cbcjs.jpg" alt=""></span>
+                                        </div>
+                                        <div class="gzhx1">crossincode</div>
+                                        <div class="gzhx2">每天5分钟，轻松学编程。点击关注这里有浅显易懂的 Python 入门教程。 编程世界的新手指南</div>
+                                    </div>
+                                    <div class="content">
+                                        <div class="gzhx">凹凸数据
+                                            <span class="xx"><img src="img/atsj.jpg" alt=""></span>
+                                        </div>
+                                        <div class="gzhx1">alltodata</div>
+                                        <div class="gzhx2">一个不务正业的数据🐶！爬虫、数据分析、可视化、方法论，一条龙服务!</div>
+                                    </div>
+                                    <div class="content">
+                                        <div class="gzhx">AirPython
+                                            <span class="xx"><img src="img/airp.jpg" alt=""></span>
+                                        </div>
+                                        <div class="gzhx1">AirPython</div>
+                                        <div class="gzhx2">专注于Python爬虫/自动化/Web原创技术干货！</div>
+                                    </div>
+                                </section>
+                                <section style="width: 100%;height: 100%;">
+                                    <h5 class="h_c" style="display: inline-block;">Python领域
+                                        <span style="font-size: 12px;color: gray;padding-left: 30px;">Python中</span>
+                                    </h5>
+                                    <div class="content" style="color: #009999;">
+                                        <div class="gzhx">优质公众号</div>
+                                        <div class="gzhx1">微信号</div>
+                                        <div class="gzhx2">功能介绍</div>
+                                    </div>
+                                    <div class="content">
+                                        <div class="gzhx">python爬虫人工智能大数据
+                                            <span class="xx"><img src="img/pcrgzndsj.jpg" alt=""></span>
+                                        </div>
+                                        <div class="gzhx1">pylearn</div>
+                                        <div class="gzhx2">免费分享150道Python真实面试题，web开发、数据分析等相关Python知识
+                                        </div>
+                                    </div>
+                                    <div class="content">
+                                        <div class="get_bj gzhx">小詹学Python
+                                            <span class="xx"><img src="img/xzp.jpg" alt=""></span>
+                                        </div>
+                                        <div class="gzhx1">xiaozhan_Python</div>
+                                        <div class="gzhx2">一个有温度的 Python 订阅号！
+                                        </div>
+                                    </div>
+                                    <div class="content">
+                                        <div class="gzhx">Python学习与数据挖掘
+                                            <span class="xx"><img src="img/xxsjwj.jpg" alt=""></span>
+                                        </div>
+                                        <div class="gzhx1">Python_CaiNiao</div>
+                                        <div class="gzhx2">专注输出Python/数据分析/数据挖掘原创干货！
+                                        </div>
+                                    </div>
+                                    <!-- 还是没有很大的必要添加超链接，这里只是提供一个渠道，帮助自己找寻 -->
+                                    <div class="content">
+                                        <div class="gzhx">Python爬虫与数据挖掘
+                                            <span class="xx"><img src="img/pcsjwj.jpg" alt=""></span>
+                                        </div>
+                                        <div class="gzhx1">crawler_python</div>
+                                        <div class="gzhx2">
+                                            专注于分享Python网络爬虫、数据挖掘、数据分析、数据处理、数据可视化、自动化测试、运维、大数据、人工智能、云计算、机器学习
+                                        </div>
+                                    </div>
+                                    <div class="content">
+                                        <div class="gzhx">Python爱好者社区
+                                            <span class="xx"><img src="img/ahzsq.jpg" alt=""></span>
+                                        </div>
+                                        <div class="gzhx1">python_shequ</div>
+                                        <div class="gzhx2">分享Python相关的技术文章、工具资源、精选课程、视频教程、热点资讯、学习资料
+                                        </div>
+                                    </div>
+                                    <div class="content">
+                                        <div class="gzhx">快学Python
+                                            <span class="xx"><img src="img/kxp.jpg" alt=""></span>
+                                        </div>
+                                        <div class="gzhx1">kxpython</div>
+                                        <div class="gzhx2">Python可视化、自动化办公、数据分析、爬虫、Web开发！人生苦短，快学Python！
+                                        </div>
+                                    </div>
+                                    <div class="content">
+                                        <div class="get_bj gzhx">Python中文社区
+                                            <span class="xx"><img src="img/pzwsq.jpg" alt=""></span>
+                                        </div>
+                                        <div class="gzhx1">python-china</div>
+                                        <div class="gzhx2">全球Python中文开发者的精神部落
+                                        </div>
+                                    </div>
+                                    <div class="content">
+                                        <div class="gzhx">Python编程时光
+                                            <span class="xx"><img src="img/bcsg.jpg" alt=""></span>
+                                        </div>
+                                        <div class="gzhx1">Cool-Python</div>
+                                        <div class="gzhx2">点击领取《PyCharm中文指南》和《Python黑魔法指南》高清电子书，回复PDF即可
+                                        </div>
+                                    </div>
+                                    <!-- <div class="content">
+                                    <div class="gzhx">IT共享之家
+                                        <span class="xx"><img src="img/.jpg" alt=""></span>
+                                    </div>
+                                    <div class="gzhx1">info-share</div>
+                                    <div class="gzhx2">专注于分享计算机各类知识，小编将不定期分享各种计算机技术干货、学习资料、面试题目、送书福利、企业公司内推信息
+                                      </div>
+                                </div> -->
+                                    <div class="content">
+                                        <div class="gzhx">菜J学Python
+                                            <span class="xx"><img src="img/cjxp.jpg" alt=""></span>
+                                        </div>
+                                        <div class="gzhx1">caijxuepy</div>
+                                        <div class="gzhx2">专注Python爬虫/数据分析/可视化/自动化办公等
+                                        </div>
+                                    </div>
+                                    <div class="content">
+                                        <div class="get_bj1 gzhx">菜鸟学Python
+                                            <span class="xx"><img src="img/cnxp.jpg" alt=""></span>
+                                        </div>
+                                        <div class="gzhx1">cainiao_xueyuan</div>
+                                        <div class="gzhx2">
+                                            已原创460+篇，从入门，进阶技巧，爬虫数据分析，数据可视化等，以及经验和技巧的总结,趣味原创文章，破解九宫格，破解Google面试题，情人节选对象，微软面试题，弹球游戏，聊天机器人等
+                                        </div>
+                                    </div>
+                                </section>
+                                <section style="width: 100%;height: 100%;">
+                                    <h5 class="h_c" style="display: inline-block;">Python领域
+                                        <span style="font-size: 12px;color: gray;padding-left: 30px;">Python下</span>
+                                    </h5>
+                                    <div class="content" style="color: #009999;">
+                                        <div class="gzhx">优质公众号</div>
+                                        <div class="gzhx1">微信号</div>
+                                        <div class="gzhx2">功能介绍</div>
+                                    </div>
+                                    <div class="content">
+                                        <div class="gzhx"><a href="http://www.justdopython.com" class="get_bj span_a"
+                                                target="_blank">Python技术</a>
+                                            <span class="xx"><img src="img/pjs.jpg" alt=""></span>
+                                        </div>
+                                        <div class="gzhx1">pythonall</div>
+                                        <div class="gzhx2">由一群热爱 Python 的技术人组建，专业输出高质量原创的 Python 系列文章
+                                        </div>
+                                    </div>
+                                    <div class="content">
+                                        <div class="gzhx">简说Python
+                                            <span class="xx"><img src="img/jmp.jpg" alt=""></span>
+                                        </div>
+                                        <div class="gzhx1">xksnh888</div>
+                                        <div class="gzhx2">号主老表，自学，分享Python，SQL零基础入门、数据分析、数据挖掘、机器学习优质文章以及学习经验
+                                        </div>
+                                    </div>
+                                    <div class="content">
+                                        <div class="gzhx">数据不吹牛
+                                            <span class="xx"><img src="img/sjbcn.jpg" alt=""></span>
+                                        </div>
+                                        <div class="gzhx1">shujubuchuiniu</div>
+                                        <div class="gzhx2">有趣+干货的数据分析宝藏
+                                        </div>
+                                    </div>
+                                    <div class="content">
+                                        <div class="gzhx">大邓和他的Python
+                                            <span class="xx"><img src="img/ddp.jpg" alt=""></span>
+                                        </div>
+                                        <div class="gzhx1">DaDengAndHisPython</div>
+                                        <div class="gzhx2">管理学在读博士，本公众号基本围绕着文科生科研需要，分享python网络爬虫、文本数据清洗、文本数据分析
+                                        </div>
+                                    </div>
+                                    <div class="content">
+                                        <div class="gzhx">Python大本营
+                                            <span class="xx"><img src="img/pdby.jpg" alt=""></span>
+                                        </div>
+                                        <div class="gzhx1">pythonnews</div>
+                                        <div class="gzhx2">Python学习者的技术社区，从基础到进阶，从理论到实践，通过优质内容、线上线下技术分享，结构化串联的知识体系
+                                        </div>
+                                    </div>
+                                    <div class="content">
+                                        <div class="gzhx">Python开发与大数据人工智能
+                                            <span class="xx"><img src="img/kfdsj.jpg" alt=""></span>
+                                        </div>
+                                        <div class="gzhx1">gh_c1fa17061831</div>
+                                        <div class="gzhx2">数据智能、数据分析与挖掘、机器学习算法、深度学习算法、人工智能领域的干货文章分享
+                                        </div>
+                                    </div>
+                                    <div class="content">
+                                        <div class="gzhx">Python绿色通道
+                                            <span class="xx"><img src="img/lstd.jpg" alt=""></span>
+                                        </div>
+                                        <div class="gzhx1">Python_channel</div>
+                                        <div class="gzhx2">看Python干货，点击回复「大礼包」送你一份大礼，每天20个名额！
+                                        </div>
+                                    </div>
+                                    <div class="content">
+                                        <div class="gzhx">Python实用宝典
+                                            <span class="xx"><img src="img/sybd.jpg" alt=""></span>
+                                        </div>
+                                        <div class="gzhx1">pythondict</div>
+                                        <div class="gzhx2">如此Python，怎能不爱
+                                        </div>
+                                    </div>
+                                    <div class="content">
+                                        <div class="gzhx">Python知识圈
+                                            <span class="xx"><img src="img/zsq.jpg" alt=""></span>
+                                        </div>
+                                        <div class="gzhx1">PythonCircle</div>
+                                        <div class="gzhx2">回复"100"领取Python面试题100道的PDF文档，分享 Python 基础知识、Python
+                                            爬虫&实战、Python 自动化
+                                        </div>
+                                    </div>
+                                    <div class="content">
+                                        <div class="gzhx">Python干货铺子
+                                            <span class="xx"><img src="img/ghpz.jpg" alt=""></span>
+                                        </div>
+                                        <div class="gzhx1">gh_f97b1abc634f</div>
+                                        <div class="gzhx2">
+                                            Python学习和干货分享、爬虫、机器学习、深度学习、地理数据处理与空间可视化、NCL科研绘图、Matlab学习、ArcGIS空间可视化
+                                        </div>
+                                    </div>
+                                </section>
+                                <section style="width: 100%;height: 100%;">
+                                    <h5 class="h_c">Python领域<span
+                                            style="font-size: 12px;color: gray;padding-left: 30px;">Python more</span>
+                                        <span id="show_time"
+                                            style="float: right;display: inline-block;margin-right: 50px;"></span>
+                                    </h5>
+                                    <div class="content" style="color: #009999;">
+                                        <div class="gzhx">优质公众号</div>
+                                        <div class="gzhx1">微信号</div>
+                                        <div class="gzhx2">功能介绍</div>
+                                    </div>
+                                    <div class="content">
+                                        <div class="get_bj gzhx">数据分析与统计学之美
+                                            <span class="xx"><img src="img/sjxzm.jpg" alt=""></span>
+                                        </div>
+                                        <div class="gzhx1">huang_superme</div>
+                                        <div class="gzhx2">免费领"Python自动化办公原创文档"，共52页，回复"自动化"三个字领取！
+                                        </div>
+                                    </div>
+                                    <div class="content">
+                                        <div class="get_bj gzhx">python数据分析之禅
+                                            <span class="xx"><img src="img/sjfxzc.jpg" alt=""></span>
+                                        </div>
+                                        <div class="gzhx1">gh_13f2afc95983</div>
+                                        <div class="gzhx2">点击领取pandas高清速查表，后台回复"速查表"获取
+                                        </div>
+                                    </div>
+                                    <div class="content">
+                                        <div class="gzhx">数据森麟
+                                            <span class="xx"><img src="img/sjsl.jpg" alt=""></span>
+                                        </div>
+                                        <div class="gzhx1">shujusenlin</div>
+                                        <div class="gzhx2">公众号后台回复"文章"，获取原创文章列表，一起学习数据分析
+                                        </div>
+                                    </div>
+                                    <div class="content">
+                                        <div class="gzhx">python
+                                            <span class="xx"><img src="img/python1.jpg" alt=""></span>
+                                        </div>
+                                        <div class="gzhx1">python6359</div>
+                                        <div class="gzhx2">python学习课程（学习方法、知识点、小案例等）关注我；开启python学霸模式！
+                                        </div>
+                                    </div>
+                                    <div class="content">
+                                        <div class="gzhx">Python代码大全
+                                            <span class="xx"><img src="img/dmdq.jpg" alt=""></span>
+                                        </div>
+                                        <div class="gzhx1">pythondaquan</div>
+                                        <div class="gzhx2">Python源程序、源代码、源码分享，Python代码大全，Python源代码学习，Python入门，Python基础教程
+                                        </div>
+                                    </div>
+                                    <div class="content">
+                                        <div class="get_bj1 gzhx">IT共享之家
+                                            <span class="xx"><img src="img/.jpg" alt=""></span>
+                                        </div>
+                                        <div class="gzhx1">info-share</div>
+                                        <div class="gzhx2">专注于分享计算机各类知识，小编将不定期分享各种计算机技术干货、学习资料、面试题目、送书福利、企业公司内推信息
+                                        </div>
+                                    </div>
+                                    <div class="content">
+                                        <div class="gzhx">NLP奇幻之旅
+                                            <span class="xx"><img src="img/qhzl.jpg" alt=""></span>
+                                        </div>
+                                        <div class="gzhx1">easy_web_scrape</div>
+                                        <div class="gzhx2">致力于推广NLP相关知识，以及其他AI相关内容，如CV，知识图谱等-也会介绍Python，数据结构与算法及其他内容
+                                        </div>
+                                    </div>
+                                    <div class="content">
+                                        <div class="gzhx">Python进击者
+                                            <span class="xx"><img src="img/.jpg" alt=""></span>
+                                        </div>
+                                        <div class="gzhx1">JAVAandPythonJun</div>
+                                        <div class="gzhx2">博主从高一接触计算机，偶然间学习了Python，目前是个后端er，热爱互联网，感谢互联网
+                                        </div>
+                                    </div>
+                                    <div class="content">
+                                        <div class="gzhx">
+                                            <span class="xx"><img src="img/.jpg" alt=""></span>
+                                        </div>
+                                        <div class="gzhx1"></div>
+                                        <div class="gzhx2">
+                                        </div>
+                                    </div>
+                                    <div class="content">
+                                        <div class="gzhx">
+                                            <span class="xx"><img src="img/.jpg" alt=""></span>
+                                        </div>
+                                        <div class="gzhx1"></div>
+                                        <div class="gzhx2">
+                                        </div>
+                                    </div>
+                                    <div class="content">
+                                        <div class="gzhx">
+                                            <span class="xx"><img src="img/.jpg" alt=""></span>
+                                        </div>
+                                        <div class="gzhx1"></div>
+                                        <div class="gzhx2">
+                                        </div>
+                                    </div>
+                                </section>
+                                <section style="width: 100%;height: 100%;">
+                                    <h5 class="h_c">编程领域<span
+                                            style="font-size: 12px;color: gray;padding-left: 30px;">除Python以外的编程优质公众号</span>
+                                    </h5>
+                                    <div class="content" style="color: #009999;">
+                                        <div class="gzhx">优质公众号</div>
+                                        <div class="gzhx1">微信号</div>
+                                        <div class="gzhx2">功能介绍</div>
+                                    </div>
+                                    <div class="content">
+                                        <div class="gzhx">
+                                            <span class="xx"><img src="img/.jpg" alt=""></span>
+                                        </div>
+                                        <div class="gzhx1"></div>
+                                        <div class="gzhx2">
+                                        </div>
+                                    </div>
+                                </section>
+                                <section style="width: 100%;height: 100%;">
+                                    <div class="content">
+                                        <div class="gzhx"><span href="" class="span_a"
+                                                style="margin-left: 5px;">目前还没有呢...</span>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                            <div class="d_click" style="cursor: pointer;" id="d">
+                                <span class="s_click" onclick="setTab(0)" style="">1</span>
+                                <span onclick="setTab(1)">2</span>
+                                <span onclick="setTab(2)">3</span>
+                                <span onclick="setTab(3)">4</span>
+                                <span onclick="setTab(4)">5</span>
+                                <span onclick="setTab(5)">...</span>
+                            </div>
+                            <script>
+                                //暂时只能实现分页，但是不能实现左右切换的功能
+                                function setTab(n) { //
+                                    var tli = document.getElementById("d").getElementsByTagName("span");//控制标题的显示与遮盖
+                                    var mli = document.getElementById("cut").getElementsByTagName("section");//控制标题时，对应内容的显示与遮盖
+                                    for (i = 0; i < tli.length; i++) {
+                                        tli[i].className = (i == n) ? "s_click" : "";
+                                        mli[i].style.display = (i == n) ? "block" : "none";
+                                    }
+                                }
+                            </script>
+                        </li>
+                        <!-- 精选文章 -->
+                        <li data-content="gallery" style="padding-left: 0;height: 100%;width: 1180px;padding-right: 0;">
+                            <div class="fleft" style="cursor: pointer;" id="d1">
+                                <span class="s_click" onclick="setTab1(0)" style="">法纳斯特</span>
+                                <span onclick="setTab1(1)">菜J学Python</span>
+                                <span onclick="setTab1(2)">其他精选</span>
+                                <span onclick="setTab1(3)">数据分析</span>
+                                <span onclick="setTab1(4)">网络爬虫</span>
+                                <span onclick="setTab1(5)">实用技巧</span>
+                                <span onclick="setTab1(6)">开发实战</span>
+                                <!--  -->
+                                <span onclick="setTab1(7)">CSDN</span>
+                                <span onclick="setTab1(8)">简书-Python</span>
+                                <span onclick="setTab1(9)">知乎-Python</span>
+                                <span onclick="setTab1(10)">博客园</span>
+                                <span onclick="setTab1(11)">更新</span>
+                            </div>
+                            <script>
+                                //暂时只能实现分页，但是不能实现左右切换的功能
+                                function setTab1(n) { //
+                                    var tli = document.getElementById("d1").getElementsByTagName("span");//控制标题的显示与遮盖
+                                    var mli = document.getElementById("cut1").getElementsByTagName("section");//控制标题时，对应内容的显示与遮盖
+                                    for (i = 0; i < tli.length; i++) {
+                                        tli[i].className = (i == n) ? "s_click" : "";
+                                        mli[i].style.display = (i == n) ? "block" : "none";
+                                    }
+                                }
+                            </script>
+                            <div class="show box" style="height: 530px;float: left;;width: 1080px;margin-right: 20px;"
+                                id="cut1">
+                                <!-- 法纳斯特 -->
+                                <section class="block section_k">
+                                    <h5>法纳斯特<span style="font-size: 12px;color: gray;padding-left: 30px;">Farnast, you
+                                            are a close friend of mine who studies Python. Is that acceptable to
+                                            you.</span>
+                                    </h5>
+                                    <div class="content" style="color: #009999;">
+                                        <div class="wz_n wz" style="font-size: 14px;">文章标题</div>
+                                        <div class="wz_n wz2" style="font-size: 14px;">文章介绍</div>
+                                    </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank" href="https://mp.weixin.qq.com/s/uqbAAcahIZSn88SyoTi-jA"
+                                                class="span_a" style="">
+                                                超燃的文字云效果，用Python就能轻松get！</a><em style="font-size: 12px;"></em>
+                                        </div>
+                                        <div class="wz2">词云图+stylecloud库绘制词云+wordcloud库绘制词云+pyecharts库的WordCloud绘制词云
+                                        </div>
+                                    </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank" href="https://mp.weixin.qq.com/s/guoUqoMX_JE10Oaiy2YYyA"
+                                                class="span_a" style="">Python数据可视化：25年GDP之变</a>
+                                            <em style="font-size: 12px;"></em>
+                                        </div>
+                                        <div class="wz2">实现了25年间各省市GDP数据的可视化
+                                        </div>
+                                    </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank" href="https://mp.weixin.qq.com/s/vxgFTwwknbf7a2YgiRFMkA"
+                                                class="span_a" style="">Python数据可视化：网易云音乐歌单</a>
+                                            <em style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+                                        </div>
+                                        <div class="wz2">网易云歌单分析
+                                        </div>
+                                    </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank" href="https://mp.weixin.qq.com/s/xq-nfytpTaboBwgQfxgiMQ"
+                                                class="span_a" style="">Python数据可视化：豆瓣电影TOP250</a>
+                                            <em style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+                                        </div>
+                                        <div class="wz2">通过Scrapy框架，对豆瓣电影TOP250信息进行爬取
+                                        </div>
+                                    </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank" href="https://mp.weixin.qq.com/s/VpZM3ySwN_Yj7Ml5gJpgPw"
+                                                class="span_a" style="">做动态图表，没有数据？用Python就能获取！</a>
+                                            <em style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+                                        </div>
+                                        <div class="wz2">聊一聊可视化视频的数据获取，主要是「百度指数」和「微博指数」
+                                        </div>
+                                    </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank"
+                                                href="https://mp.weixin.qq.com/s?__biz=MzU4OTYzNjE2OQ==&mid=2247486653&idx=1&sn=92128455c20ada46b355f5166ba5d4b5&chksm=fdcb3b9bcabcb28de6cb8f5c08a557f5078aede86b21fc151babc29dde8451d0a3a60efd0a51&scene=21#wechat_redirect"
+                                                class="span_a" style="">刷爆全网的动态条形图，原来5行Python代码就能实现！</a>
+                                            <em style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+                                        </div>
+                                        <div class="wz2">比如数可视的「花火hanabi」，嫡数的「镝数图表」，以及国外网站「Flourish」（本文有点小坑，慎入！）
+                                        </div>
+                                    </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank" href="https://mp.weixin.qq.com/s/C_9vJS7o7ChpnUE-Wn6yMA"
+                                                class="span_a" style="">selenium爬取京东笔记本电脑信息</a>
+                                            <em style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+                                        </div>
+                                        <div class="wz2">使用selenium爬取网页，破解登录，并自动化获取网页信息
+                                        </div>
+                                    </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank" href="https://mp.weixin.qq.com/s/NuxGEE3CylSRGCbjRe4NHA"
+                                                class="span_a" style="">求你了，别再用 pip 那乌龟的速度去安装库了</a>
+                                            <em style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+                                        </div>
+                                        <div class="wz2">pip提速方法主要有两种，一种是临时提速，一种是永久提速
+                                        </div>
+                                    </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank" href="https://mp.weixin.qq.com/s/W_3e1SjUhAFnv1N54EUlzw"
+                                                class="span_a" style="">年轻人不讲武德，竟用Python让马老师表演闪电五连鞭</a>
+                                            <em style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+                                        </div>
+                                        <div class="wz2">用Python给马保国老师做一个闪电五连鞭动态词云图
+                                        </div>
+                                    </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank" href="https://mp.weixin.qq.com/s/l6sPZAdoVVmqkI3JDJm7NA"
+                                                class="span_a" style="">让数据"动"起来：Python动态图表制作</a>
+                                            <em style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+                                        </div>
+                                        <div class="wz2">FuncAnimation，可以让我们的静态图表动起来
+                                        </div>
+                                    </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank" href="https://mp.weixin.qq.com/s/u5ZB0l7cZmHYZHOa1nyCmQ"
+                                                class="span_a" style="">教你使用 3 行 Python 代码获取海量数据</a>
+                                            <em style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+                                        </div>
+                                        <div class="wz2"><a target="_blank" href="https://github.com/justinzm/gopup"
+                                                class="span_a">GitHub地址</a>
+                                            <a target="_blank" href="http://doc.gopup.cn/#/README"
+                                                class="span_a">使用文档地址</a>
+                                        </div>
+                                    </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank" href="https://mp.weixin.qq.com/s/HI1Sr9MEP_LTqDWsWcpkSw"
+                                                class="span_a" style="">教你如何用 Python 三行代码做动图</a>
+                                            <em style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+                                        </div>
+                                        <div class="wz2">
+                                            <a target="_blank" href="https://github.com/JackMcKew/pandas_alive"
+                                                class="span_a">GitHub地址</a>
+                                            <a target="_blank" href="https://jackmckew.github.io/pandas_alive/"
+                                                class="span_a">使用文档地址</a>
+                                        </div>
+                                    </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank" href="https://mp.weixin.qq.com/s/UYCHjqg52YOIVGzKaiwdXw"
+                                                class="span_a" style="">赛博朋克这么火，如果与Python结合，能有多酷</a>
+                                            <em style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+                                        </div>
+                                        <div class="wz2">"赛博朋克"风格的Python库，「mplcyberpunk」
+                                        </div>
+                                    </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank" href="https://mp.weixin.qq.com/s/TUSH1yS7Zs5q7CH5ItzyyA"
+                                                class="span_a" style="">用Python自动生成Excel数据报表</a>
+                                            <em style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+                                        </div>
+                                        <div class="wz2">实战一波，使用Python自动化生成数据报表
+                                        </div>
+                                    </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank" href="https://mp.weixin.qq.com/s/cTm-MfMf6hfDWAINhpe2xA"
+                                                class="span_a" style="">这15个顶级Python库，你必须要知道</a>
+                                            <em style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+                                        </div>
+                                        <div class="wz2">挑选了15个最有用的软件包，介绍它们的功能和特点
+                                        </div>
+                                    </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank" href="" class="span_a" style=""></a>
+                                            <em style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+                                        </div>
+                                        <div class="wz2">
+                                        </div>
+                                    </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank" href="" class="span_a" style=""></a>
+                                            <em style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+                                        </div>
+                                        <div class="wz2">
+                                        </div>
+                                    </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank" href="" class="span_a" style=""></a>
+                                            <em style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+                                        </div>
+                                        <div class="wz2">
+                                        </div>
+                                    </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank" href="" class="span_a" style=""></a>
+                                            <em style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+                                        </div>
+                                        <div class="wz2">
+                                        </div>
+                                    </div>
+                                </section>
+                                <!-- 菜J学Python -->
+                                <section class="section_k">
+                                    <h5>菜J学Python<span style="font-size: 12px;color: gray;padding-left: 30px;">Behind
+                                            the boss who is always self-effacing is always working hard for the
+                                            novices.</span>
+                                    </h5>
+                                    <div class="content" style="color: #009999;">
+                                        <div class="wz_n wz" style="font-size: 14px;">文章标题</div>
+                                        <div class="wz_n wz2" style="font-size: 14px;">文章介绍</div>
+                                    </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank" href="https://mp.weixin.qq.com/s/qJOzXSbG7ds2SQCzNN36qg"
+                                                class="span_a" style="">Python分析《演员请就位2》豆瓣评论，我找到了它频频上热搜的原因</a>
+                                            <em style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+                                        </div>
+                                        <div class="wz2">
+                                            <a target="_blank"
+                                                href="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzAwMjYxNjcwMw==&action=getalbum&album_id=1360273386337075201&scene=173&from_msgid=2456408405&from_itemidx=1&count=3&nolastread=1#wechat_redirect"
+                                                class="span_a" style="">#Python实战</a>
+                                            &nbsp;&nbsp;&nbsp;<a target="_blank"
+                                                href="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzAwMjYxNjcwMw==&action=getalbum&album_id=1578586022441992198&scene=173&from_msgid=2456408405&from_itemidx=1&count=3&nolastread=1#wechat_redirect"
+                                                class="span_a" style="">#影视娱乐数据分析</a>
+                                        </div>
+                                    </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank" href="https://mp.weixin.qq.com/s/EkwQxflrpgOmVUYo1lr2jw"
+                                                class="span_a" style="">用Python分析《令人心动的offer2》的13万条弹幕，网友们都在吐槽什么</a>
+                                            <em style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+                                        </div>
+                                        <div class="wz2">爬取《令人心动的offer》第二季13万+弹幕，进行可视化分析和情感分析
+                                        </div>
+                                    </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank" href="https://mp.weixin.qq.com/s/le-jsfCEZgfhfyeCwQPmEQ"
+                                                class="span_a" style="">用Python对《沉默的真相》3万+弹幕进行情感分析</a>
+                                            <em style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+                                        </div>
+                                        <div class="wz2">运用文本挖掘技术，对最近热播剧《沉默的真相》3万+弹幕进行数据分析
+                                        </div>
+                                    </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank"
+                                                href="https://mp.weixin.qq.com/s?__biz=MzAwMjYxNjcwMw==&mid=2456404450&idx=1&sn=4cee4c349aaadfaba69a9ec3919b42e3&chksm=8d5addf2ba2d54e43b6306f68524c9c602a9a9e77041071b792d0bd4ebe96a0061d3c8d7616e&cur_album_id=1360273386337075201&scene=189#rd"
+                                                class="span_a" style="">摆地摊or打工，爬取某大型招聘网站3万条招聘信息并分析，作何选择</a>
+                                            <em style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+                                        </div>
+                                        <div class="wz2">从爬取top招聘网站大量招聘信息入手，力求对财会人的整体就业市场形成提供相对客观、量化的认识
+                                        </div>
+                                    </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank" href="https://mp.weixin.qq.com/s/epJ2W513jmXrQ74aE1Rr8g"
+                                                class="span_a" style="">手把手教你用Python+可视化工具制作漂亮地图</a>
+                                            <em style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+                                        </div>
+                                        <div class="wz2">制作漂亮的可视化地图&nbsp;&nbsp;&nbsp;&nbsp;Python+可视化工具
+                                        </div>
+                                    </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank"
+                                                href="https://mp.weixin.qq.com/s?__biz=MzAwMjYxNjcwMw==&mid=2456407108&idx=1&sn=750511e178b62689258c9ce03df74775&scene=21#wechat_redirect"
+                                                class="span_a" style="">用Python爬取B站、腾讯视频、芒果TV和爱奇艺视频弹幕</a>
+                                            <em style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+                                        </div>
+                                        <div class="wz2">轻松获取主流视频网站弹幕数据
+                                        </div>
+                                    </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank" href="https://mp.weixin.qq.com/s/qpycz3xoXCfAQwt1M0eCXw"
+                                                class="span_a" style="">GitHub热榜，收获12200颗星！能自动登入25个主流网站爬虫库！</a>
+                                            <em style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+                                        </div>
+                                        <div class="wz2">里面写了很多网站的爬虫示例代码，很给力
+                                        </div>
+                                    </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank"
+                                                href="https://mp.weixin.qq.com/s?__biz=MzAwMjYxNjcwMw==&mid=2456404005&idx=1&sn=381e740a8169ff5ac31a5df587383cb0&chksm=8d5adc35ba2d5523121f17d7ddb7bc06ae262548f0b8ca9e6020928fdc78e5bfdee9a40f5edc&scene=21#wechat_redirect"
+                                                class="span_a" style="">实战|Python爬虫并用Flask框架搭建可视化网站</a>
+                                            <em style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+                                        </div>
+                                        <div class="wz2">以爬取豆瓣电影数据并搭建可视化网站为例进行讲解
+                                        </div>
+                                    </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank" href="https://mp.weixin.qq.com/s/9fl832REc7aohtQjQO3VNA"
+                                                class="span_a" style="">Pandas也能爬虫？还如此简单</a>
+                                            <em style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+                                        </div>
+                                        <div class="wz2">可以轻松实现抓取Table表格型数据（比较局限，但扩展了你的视野）
+                                        </div>
+                                    </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank" href="https://mp.weixin.qq.com/s/GTahFE6eEc86pHhyUbzCbw"
+                                                class="span_a" style="">用Python爬取"农药"英雄皮肤</a>
+                                            <em style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+                                        </div>
+                                        <div class="wz2">教大家如何使用Python来爬取这些精美的英雄皮肤
+                                        </div>
+                                    </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank" href="" class="span_a" style=""></a>
+                                            <em style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+                                        </div>
+                                        <div class="wz2">
+                                        </div>
+                                    </div>
+                                </section>
+                                <!-- 其他精选 -->
+                                <section class="section_k">
+                                    <h5>其他精选<span style="font-size: 12px;color: gray;padding-left: 30px;">It's a shame
+                                            you didn't become the only one, but luckily you have more company.</span>
+                                    </h5>
+                                    <div class="content" style="color: #009999;">
+                                        <div class="wz_n wz" style="font-size: 14px;">文章标题</div>
+                                        <div class="wz_n wz2" style="font-size: 14px;">文章介绍</div>
+                                    </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank" href="https://mp.weixin.qq.com/s/eRKkJTWw2lInas8mYKlyiw"
+                                                class="span_a" style="">如何用python制作动态二维码，来哄女朋友开心</a>
+                                            <em style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+                                        </div>
+                                        <div class="wz2">生成带图片的动态二维码
+                                        </div>
+                                    </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank" href="https://mp.weixin.qq.com/s/rvVwpbXySPrpP6Dsf7Jl9w"
+                                                class="span_a" style="">1份专业的数据分析报告到底怎么写</a>
+                                            <em style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+                                        </div>
+                                        <div class="wz2">分享一篇关于如何撰写分析报告的干货
+                                        </div>
+                                    </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank" href="https://mp.weixin.qq.com/s/yKau4CDzWzebbn5S6PkAfw"
+                                                class="span_a" style="">4个小时我赚了600块</a>
+                                            <em style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;Python研究者</em>
+                                        </div>
+                                        <div class="wz2">
+                                            <a target="_blank"
+                                                href="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzU5NjM4MDY1Mw==&action=getalbum&album_id=1671481911963156482&scene=173&from_msgid=2247485855&from_itemidx=1&count=3&nolastread=1#wechat_redirect"
+                                                class="span_a">#接单</a>
+                                            <a target="_blank"
+                                                href="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzU5NjM4MDY1Mw==&action=getalbum&album_id=1575641054601674754&scene=173&from_msgid=2247485855&from_itemidx=1&count=3&nolastread=1#wechat_redirect"
+                                                class="span_a">#python</a>
+                                        </div>
+                                    </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank" href="https://mp.weixin.qq.com/s/IHTOom3bWXubq0_XCJn3Pw"
+                                                class="span_a" style="">手把手教你实现『B站直播』弹幕实时分析</a>
+                                            <em style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+                                        </div>
+                                        <div class="wz2">采集直播弹幕，然后通过情感分析，不同时间点的评论数，高频词统计
+                                        </div>
+                                    </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank" href="https://mp.weixin.qq.com/s/hMda4VdpULKWU5EEzpybHA"
+                                                class="span_a" style="">以『B站直播』为例，实现数据『实时』可视化分析</a>
+                                            <em style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+                                        </div>
+                                        <div class="wz2">数据进行可视化（接上篇）
+                                        </div>
+                                    </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank" href="https://mp.weixin.qq.com/s/8BgnIs9PW_f69PWIim8xYA"
+                                                class="span_a" style="">Python爬取美团网数据这么简单，别再说你不会了哦</a>
+                                            <em style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;大邓和他的Python</em>
+                                        </div>
+                                        <div class="wz2">用requests请求的数据格式是标准的json字符串，其一是通过搜索获取结果，其二是通过筛选获取结果
+                                        </div>
+                                    </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank" href="https://mp.weixin.qq.com/s/OepBzS7ucrvEpxy1Mf0p2g"
+                                                class="span_a" style="">女神周迅离婚，Python分析国内离婚情况，结果触目惊心</a>
+                                            <em style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+                                        </div>
+                                        <div class="wz2"><a target="_blank"
+                                                href="https://data.stats.gov.cn/easyquery.htm?cn=C01&zb=A0P0C&sj=2019"
+                                                class="span_a">给个网址</a>
+                                        </div>
+                                    </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank" href="https://mp.weixin.qq.com/s/d8OPuqA-675PptgkOvUo4A"
+                                                class="span_a" style="">Python数据可视化，无法绕过的matplotlib基础知识</a>
+                                            <em style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;数据不吹牛</em>
+                                        </div>
+                                        <div class="wz2">几乎所有用python做可视化的人，都绕不开matplotlib这个有"权威"意义的库
+                                        </div>
+                                    </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank" href="https://mp.weixin.qq.com/s/8KSRiOiY75i9ocxWm7-50g"
+                                                class="span_b">不到70行Python代码，轻松玩转RFM用户分析模型（附案例数据和代码）</a>
+                                            <em style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+                                        </div>
+                                        <div class="wz2">RFM，是一种经典到头皮发麻的用户分类、价值分析模型（值得推荐，必看）
+                                        </div>
+                                    </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank" href="https://mp.weixin.qq.com/s/b-OiOoHryiaNotHI_jrLog"
+                                                class="span_a" style="">基于实际业务场景的几套超干指标体系</a>
+                                            <em style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+                                        </div>
+                                        <div class="wz2">明确业务场景——确定分析目标——构建分析体系——梳理核心指标
+                                        </div>
+                                    </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank" href="https://mp.weixin.qq.com/s/BVlkjORQqoyn1-RpxME_eg"
+                                                class="span_a" style="">肝了一晚上搞出来一个微信订阅号鉴黄机器人</a>
+                                            <em style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+                                        </div>
+                                        <div class="wz2">公众号接收用户消息->微信平台发送服务器->服务器处理消息->返回处理结果给微信平台->微信平台发送内容给用户
+                                        </div>
+                                    </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank" href="https://mp.weixin.qq.com/s/2mntPvPRnWNKDSFMAjUQ6g" class="span_a" style="">Python 获取股票数据并存入MongoDB教程</a>
+                                            <em style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+                                        </div>
+                                        <div class="wz2">
+                                            <a target="_blank" href="https://mp.weixin.qq.com/mp/publictag?action=get&tag_id=16495314146489794561&start=0&scene=173&subscene=&sessionid=svr_9db6b23976c&enterid=1619621578&from_msgid=2247486527&from_itemidx=1&count=3&nolastread=1#wechat_redirect" class="span_a" style="">#Python</a>
+                                            <a target="_blank" href="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI3MzM0ODU4Mg==&action=getalbum&album_id=1327193771930599425&scene=173&subscene=&sessionid=svr_9db6b23976c&enterid=1619621712&from_msgid=2247486527&from_itemidx=1&count=3&nolastread=1#wechat_redirect" class="span_a" style="">#量化投资</a>
+                                            <a target="_blank" href="https://mp.weixin.qq.com/mp/publictag?action=get&tag_id=4262330028496257025&start=0&scene=173&subscene=&sessionid=svr_9db6b23976c&enterid=1619621728&from_msgid=2247486527&from_itemidx=1&count=3&nolastread=1#wechat_redirect" class="span_a" style="">#MongoDB</a>
+                                        </div>
+                                    </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank" href="https://mp.weixin.qq.com/s/NSH8aA4QTc8LOtRGvUNKzA"
+                                                class="span_a" style="">渣男 23 式 | 23 种设计模式的通俗解释，看完秒懂</a>
+                                            <em style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+                                        </div>
+                                        <div class="wz2">比较有趣的一篇文章，值得开森一下
+                                        </div>
+                                    </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank" href="" class="span_a" style=""></a>
+                                            <em style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+                                        </div>
+                                        <div class="wz2">
+                                        </div>
+                                    </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank" href="" class="span_a" style=""></a>
+                                            <em style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+                                        </div>
+                                        <div class="wz2">
+                                        </div>
+                                    </div>
+                                </section>
+                                <!-- 数据分析 -->
+                                <section class="section_k">
+                                    <h5>数据分析<span style="font-size: 12px;color: gray;padding-left: 30px;">The charm of
+                                            data analysis is that you can experience the colorfulness of data.</span>
+                                    </h5>
+                                    <div class="content" style="color: #009999;">
+                                        <div class="wz_n wz" style="font-size: 14px;">文章标题</div>
+                                        <div class="wz_n wz2" style="font-size: 14px;">文章介绍</div>
+                                    </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank" href="https://mp.weixin.qq.com/s/BIG-8Mvd9HWaTFebHppdTA"
+                                                class="span_a" style="">牛批了，1 行 Python 代码就可实现炫酷可视化</a>
+                                            <em style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;python数据分析之禅</em>
+                                        </div>
+                                        <div class="wz2">新的可视化库--cufflinks&nbsp;&nbsp;&nbsp;&nbsp;dataFrame数据结合使用
+                                        </div>
+                                    </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank" href="https://mp.weixin.qq.com/s/UolyZ5iqvOvY-FFkYeGyxg"
+                                                class="span_a" style="">我们分析了《演员请就位2》的45万条弹幕，看看大家都在吐槽些什么</a>
+                                        </div>
+                                        <div class="wz2">
+                                            <a target="_blank"
+                                                href="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzA3OTAxMDQzNQ==&action=getalbum&album_id=1535841733660442624&scene=173&from_msgid=2650641901&from_itemidx=1&count=3&nolastread=1#wechat_redirect"
+                                                class="span_a" style="">#数据分析</a>
+                                            &nbsp;&nbsp;&nbsp;<a target="_blank"
+                                                href="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzA3OTAxMDQzNQ==&action=getalbum&album_id=1525670980487020545&scene=173&from_msgid=2650641901&from_itemidx=1&count=3&nolastread=1#wechat_redirect"
+                                                class="span_a" style="">#python</a>
+                                            <em style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CDA数据分析师</em>
+                                        </div>
+                                    </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank"
+                                                href="https://mp.weixin.qq.com/s?__biz=MzkwNDE5NTc0Ng==&mid=2247525244&idx=1&sn=00785618a9b34d9e815f4fdf01c36684&chksm=c08898b1f7ff11a787bcaddf6d5c6f20f49a3bd34a82a546942867c6c210697ac7b73bba4b19&mpshare=1&scene=23&srcid=0426O6ZUytdhCFMDaOvyDvqp&sharer_sharetime=1619436901373&sharer_shareid=5e14bd6bd01c0bb7f9c6052fabe4ca2e#rd"
+                                                class="span_a" style="">MySQL实战 | 利用 "窗口函数" 分析高(三)学生考试成绩和生活消费</a>
+                                            <em style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+                                        </div>
+                                        <div class="wz2">厉害的小姐姐，文章也写的很有趣味性和易读性&nbsp;&nbsp;&nbsp;&nbsp;
+                                            <a target="_blank"
+                                                href="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzkwNDE5NTc0Ng==&action=getalbum&album_id=1755392796556853250&scene=173&from_msgid=2247525244&from_itemidx=1&count=3&nolastread=1#wechat_redirect"
+                                                class="span_a">#数据分析者的MySQL学习之旅
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank" href="https://mp.weixin.qq.com/s/ZJ8-kFpJaqUUfiFS-UpIQg" class="span_a" style="">Python办公自动化｜只需三秒，一键生成数据分析报告</a>
+                                            <em style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+                                        </div>
+                                        <div class="wz2">Python在自动化办公领域越来越受欢迎，重复性工作让Python去做将是一种趋势
+                                        </div>
+                                    </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank" href="https://mp.weixin.qq.com/s/36GlhVFjEVscAhglSlbc-g" class="span_a" style="">武磊告别西甲！Python带你解读「全村的希望」武磊职业数据</a>
+                                            <em style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp; CDA数据分析师</em>
+                                        </div>
+                                        <div class="wz2">中国足球又成为了社会的焦点话题，12分钟跑、体能、成绩
+                                        </div>
+                                    </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank" href="" class="span_a" style=""></a>
+                                            <em style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+                                        </div>
+                                        <div class="wz2">
+                                        </div>
+                                    </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank" href="" class="span_a" style=""></a>
+                                            <em style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+                                        </div>
+                                        <div class="wz2">
+                                        </div>
+                                    </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank" href="" class="span_a" style=""></a>
+                                            <em style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+                                        </div>
+                                        <div class="wz2">
+                                        </div>
+                                    </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank" href="" class="span_a" style=""></a>
+                                            <em style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+                                        </div>
+                                        <div class="wz2">
+                                        </div>
+                                    </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank" href="" class="span_a" style=""></a>
+                                            <em style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+                                        </div>
+                                        <div class="wz2">
+                                        </div>
+                                    </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank" href="" class="span_a" style=""></a>
+                                            <em style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+                                        </div>
+                                        <div class="wz2">
+                                        </div>
+                                    </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank" href="" class="span_a" style=""></a>
+                                            <em style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+                                        </div>
+                                        <div class="wz2">11
+                                        </div>
+                                    </div>
+                                </section>
+                                <!-- 网络爬虫 -->
+                                <section class="section_k">
+                                    <h5>网络爬虫<span style="font-size: 12px;color: gray;padding-left: 30px;">Web crawlers,
+                                            crawling is not only data, but the love of knowledge.</span>
+                                    </h5>
+                                    <div class="content" style="color: #009999;">
+                                        <div class="wz_n wz" style="font-size: 14px;">文章标题</div>
+                                        <div class="wz_n wz2" style="font-size: 14px;">文章介绍</div>
+                                    </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank" href="https://mp.weixin.qq.com/s/lQatV8fhhn37_fg2Cpbsxg"
+                                                class="span_a" style="">教你一招另辟蹊径抓取美团火锅数据</a>
+                                            <em style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+                                        </div>
+                                        <div class="wz2">
+                                            <a href="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzU5MjY2ODEwMQ==&action=getalbum&album_id=1598688421030510593&scene=173&from_msgid=2247486196&from_itemidx=1&count=3&nolastread=1#wechat_redirect"
+                                                target="_blank" class="span_a">#网络爬虫</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                                            <a href="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzU5MjY2ODEwMQ==&action=getalbum&album_id=1598688420980178946&scene=173&from_msgid=2247486196&from_itemidx=1&count=3&nolastread=1#wechat_redirect"
+                                                target="_blank" class="span_a">#Python实战</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                                            <a href="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzU5MjY2ODEwMQ==&action=getalbum&album_id=1598688420980178944&scene=173&from_msgid=2247486196&from_itemidx=1&count=3&nolastread=1#wechat_redirect"
+                                                target="_blank" class="span_a">#Python应用</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                                            <a href="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzU5MjY2ODEwMQ==&action=getalbum&album_id=1598688420929847297&scene=173&from_msgid=2247486196&from_itemidx=1&count=3&nolastread=1#wechat_redirect"
+                                                target="_blank" class="span_a">#Python</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                                            <a href="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzU5MjY2ODEwMQ==&action=getalbum&album_id=1347235107794649089&scene=173&from_msgid=2247486196&from_itemidx=1&count=3&nolastread=1#wechat_redirect"
+                                                target="_blank" class="span_a">#Python网络爬虫</a>
+                                        </div>
+                                    </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank"
+                                                href="https://github.com/MiracleYoung/You-are-Pythonista/blob/master/PythonExercise/App/Crawl_KingofGlory/Crawl_KingofGlory_HeroSkin.py"
+                                                class="span_a" style="">爬取王者荣耀图片</a>
+                                            <em style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+                                        </div>
+                                        <div class="wz2">对于爬虫的基本格式我们要心中有数才行
+                                        </div>
+                                    </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank" href="https://mp.weixin.qq.com/s/HmvBdAasPo8IMblAcnHIrA"
+                                                class="span_a" style="">原来爬取B站弹幕这么简单</a>
+                                            <em style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;微信-数据森麟-叶庭云</em>
+                                        </div>
+                                        <div class="wz2">分析网页、获取弹幕数据、绘制词云图
+                                        </div>
+                                    </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank" href="https://mp.weixin.qq.com/s/-NSrXLrwqqf7ml7cZcz0zg"
+                                                class="span_a" style="">用python实现一个豆瓣通用爬虫(登陆、爬取、可视化分析)</a>
+                                            <em style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+                                        </div>
+                                        <div class="wz2">本篇主要实现的是对任意一部电影短评(热门)的抓取以及可视化分析
+                                        </div>
+                                    </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank" href="https://mp.weixin.qq.com/s/J3A7-B7ZT-Tsi-6Rv33uZA"
+                                                class="span_a" style="">Python爬取B站弹幕（无数量限制）</a>
+                                            <em style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+                                        </div>
+                                        <div class="wz2">想必小破站大家都很熟悉叭，里面充满了各种神奇的视频
+                                        </div>
+                                    </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank" href="https://mp.weixin.qq.com/s/kodDy3sBvZPyz1wxLhsfYA"
+                                                class="span_a" style="">『爬虫四步走』手把手教你使用 Python 抓取并存储网页数据</a>
+                                            <em style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+                                        </div>
+                                        <div class="wz2">将基于爬取 B 站视频热搜榜单数据并存储为例，详细介绍 Python 爬虫的基本流程
+                                        </div>
+                                    </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank" href="https://mp.weixin.qq.com/s/ukmSdmppTndSFSnJtzbf2g"
+                                                class="span_a" style="">一篇文章教会你利用Python网络爬虫获取电影天堂视频下载链接</a>
+                                            <em style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+                                        </div>
+                                        <div class="wz2">Python网络爬虫实战文
+                                        </div>
+                                    </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank" href="https://mp.weixin.qq.com/s/L61U6g4bl5UntyAi5yjeRQ"
+                                                class="span_a" style="">爬取了20W+条猫咪数据，awsl……</a>
+                                            <em style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+                                        </div>
+                                        <div class="wz2">猫咪交易网<a target="_blank" href="https://www.maomijiaoyi.com"
+                                                class="span_a" style="">&nbsp;&nbsp;&nbsp;&nbsp;www.maomijiaoyi.com</a>
+                                        </div>
+                                    </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank" href="" class="span_a" style=""></a>
+                                            <em style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+                                        </div>
+                                        <div class="wz2">
+                                        </div>
+                                    </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank" href="" class="span_a" style=""></a>
+                                            <em style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+                                        </div>
+                                        <div class="wz2">
+                                        </div>
+                                    </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank" href="" class="span_a" style=""></a>
+                                            <em style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+                                        </div>
+                                        <div class="wz2">
+                                        </div>
+                                    </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank" href="" class="span_a" style=""></a>
+                                            <em style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+                                        </div>
+                                        <div class="wz2">
+                                        </div>
+                                    </div>
+                                </section>
+                                <!-- 实用技巧 -->
+                                <section class="section_k">
+                                    <h5>实用技巧<span style="font-size: 12px;color: gray;padding-left: 30px;">Simplify
+                                            things and increase your value
+                                            with efficiency.</span>
+                                    </h5>
+                                    <div class="content" style="color: #009999;">
+                                        <div class="wz_n wz" style="font-size: 14px;">文章标题</div>
+                                        <div class="wz_n wz2" style="font-size: 14px;">文章介绍</div>
+                                    </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank"
+                                                href="https://mp.weixin.qq.com/s?__biz=Mzg3NjMzMjc5OQ==&mid=2247484338&idx=1&sn=f9332dd153bc715e97c90a2b0996e3bf&chksm=cf329022f845193478eef860f9ebd9b3761a464073e1cc07df69d4e106ad9356c466f8b9e0e3&scene=21#wechat_redirect"
+                                                class="span_a" style="">30行python代码帮秘书小姐姐填了上百份表格，成功俘获了小姐姐的芳心</a>
+                                            <em style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+                                        </div>
+                                        <div class="wz2">Python数据分析之禅-自动化办公
+                                        </div>
+                                    </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank" href="https://mp.weixin.qq.com/s/_-f_i8sLuTXyKyzG1tSVWA"
+                                                class="span_a" style="">8个Python高效数据分析的技巧(附完整代码)</a>
+                                            <em style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+                                        </div>
+                                        <div class="wz2">涉及List、Lambda表达式、Map、Filter、Concat、Merge、Join、Apply、Pivot
+                                            Tables
+                                        </div>
+                                    </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank" href="https://mp.weixin.qq.com/s/CK1psNvXKW8pFgoEyagPMA"
+                                                class="span_a" style="">朴实无华，Python 100 例</a>
+                                            <em style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+                                        </div>
+                                        <div class="wz2">Python基础 62 例、Python 核心 12 例、Python 习惯 26 例
+                                        </div>
+                                    </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank" href="https://mp.weixin.qq.com/s/CiaD27XWNEDb8oBTY4gpFg"
+                                                class="span_a" style="">别再说没有数据分析练手的数据了，这个网站数据既全面又准确</a>
+                                            <em style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+                                        </div>
+                                        <div class="wz2">推荐1个存在大量数据的网站，并附上详细教程
+                                        </div>
+                                    </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank" href="https://mp.weixin.qq.com/s/dBxwQFBg44R4YAj12Q-U5g"
+                                                class="span_a" style="">爬取bilibili视频+弹幕</a>
+                                            <em style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+                                        </div>
+                                        <div class="wz2">You-get 大法好（这个是真的流弊好吧！）
+                                        </div>
+                                    </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank" href="https://mp.weixin.qq.com/s/hjYbkATEsqt3bx2xg-o5kw"
+                                                class="span_a" style="">Python 下载文件的七种方式，你get了吗</a>
+                                            <em style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+                                        </div>
+                                        <div class="wz2">介绍了 Python 下载文件的各种方式
+                                        </div>
+                                    </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank" href="https://mp.weixin.qq.com/s/xoqkeeRrEa5pXVRn_0Xulg"
+                                                class="span_a" style="">微软最强 Python 自动化工具开源了！不用写一行代码</a>
+                                            <em style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+                                        </div>
+                                        <div class="wz2">微软开源了一款非常强大的 Python 自动化依赖库：playwright-python
+                                        </div>
+                                    </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank" href="https://mp.weixin.qq.com/s/0hbkRsnCBGMo_sw8t6ilJg"
+                                                class="span_a" style="">csv 文件读写乱码问题的一个简单解决方法</a>
+                                            <em style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+                                        </div>
+                                        <div class="wz2">总结一个处理csv文件乱码问题
+                                        </div>
+                                    </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank" href="https://mp.weixin.qq.com/s/hsf_Jul5pAzRn2dJ4tQa0g"
+                                                class="span_a" style="">表白神器！用Python绘制爱心墙</a>
+                                            <em style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+                                        </div>
+                                        <div class="wz2">感兴趣的小伙伴完全可以把代码用来表白自己的女盆友
+                                        </div>
+                                    </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank" href="https://mp.weixin.qq.com/s/gS7-BscZLBILDNHCl61HgA"
+                                                class="span_a" style="">教你给pycharm换上心爱的小姐姐！这么做就对了……</a>
+                                            <em style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+                                        </div>
+                                        <div class="wz2">如果能有个妹子能和我一起coding那是一种什么体验
+                                        </div>
+                                    </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank" href="https://mp.weixin.qq.com/s/5sSiH5LWBZWE4c_6d2k9lQ" class="span_b" style="">4300 字Python列表使用总结，用心</a>
+                                            <em style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+                                        </div>
+                                        <div class="wz2">以下文章来源于Python与算法社区,很详细的列表教程，值得推荐
+                                        </div>
+                                    </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank" href="https://mp.weixin.qq.com/s/MW8NiM61FbBXIaS9OxASdw"
+                                                class="span_a" style="">爱了爱了！8 个被低估但功能非常强大的 VSCode 插件</a>
+                                            <em style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+                                        </div>
+                                        <div class="wz2">Codesnap、Marquee、TabNine、emojisense、Material Theme...
+                                        </div>
+                                    </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank" href="https://mp.weixin.qq.com/s/hNASmGOr8dd6Ivsn5OmLWQ"
+                                                class="span_a" style="">用Python制作一个数据预处理小工具，多种操作，一键完成，非常实用</a>
+                                            <em style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+                                        </div>
+                                        <div class="wz2">对数据进行预览，查看数据是否出现了缺失值、重复值等异常情况
+                                        </div>
+                                    </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank" href="https://mp.weixin.qq.com/s/X0AlSkUOfsXCtvT7jRUTjw"
+                                                class="span_a" style="">这个插件儿，一键爬取全网图片，贼高清</a>
+                                            <em style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+                                        </div>
+                                        <div class="wz2">「 ImageAssistant 」（确实非常棒）
+                                        </div>
+                                    </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank" href="https://mp.weixin.qq.com/s/40Ms5N8kpGizhQvxRGp1tA" class="span_a" style="">这10篇Python实战教程，你不学可能会后悔</a>
+                                            <em style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+                                        </div>
+                                        <div class="wz2">一篇文章10个技巧，值得挖掘挖掘
+                                        </div>
+                                    </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank" href="https://mp.weixin.qq.com/s/3cMpYg_Se67JH3sZUzLA4A" class="span_b" style="">pandas导出Excel表格，银行卡号、身份证号无法正常显示的问题，该怎么解决</a>
+                                            <em style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+                                        </div>
+                                        <div class="wz2">解决身份证列导出显示不正常
+                                        </div>
+                                    </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank" href="https://mp.weixin.qq.com/s/Hb0Jp_QN4r5ZfYVxy3XuFA" class="span_a" style="">手把手教你用Python打造一款批量下载视频并能可视化显示下载进度的下载器</a>
+                                            <em style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+                                        </div>  
+                                        <div class="wz2">
+                                            <a target="_blank" href="https://mp.weixin.qq.com/mp/publictag?action=get&tag_id=933449650738823169&start=0&scene=173&subscene=&sessionid=svr_5df8c2c5e42&enterid=1619622323&from_msgid=2247488130&from_itemidx=1&count=3&nolastread=1#wechat_redirect" class="span_a" style="">#Python爬虫</a>
+                                            <a target="_blank" href="https://mp.weixin.qq.com/mp/publictag?action=get&tag_id=5437950589881286657&start=0&scene=173&subscene=&sessionid=svr_5df8c2c5e42&enterid=1619622310&from_msgid=2247488130&from_itemidx=1&count=3&nolastread=1#wechat_redirect" class="span_a" style="">#网络爬虫</a>
+                                            <a target="_blank" href="https://mp.weixin.qq.com/mp/publictag?action=get&tag_id=13669794139003158529&start=0&scene=173&subscene=&sessionid=svr_5df8c2c5e42&enterid=1619622293&from_msgid=2247488130&from_itemidx=1&count=3&nolastread=1#wechat_redirect" class="span_a" style="">#Python开发</a>
+                                            <a target="_blank" href="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzU3MzQxMjE2NA==&action=getalbum&album_id=1319834436367908865&scene=173&from_msgid=2247488130&from_itemidx=1&count=3&nolastread=1#wechat_redirect" class="span_a" style="">#Python爬虫与数据挖掘</a>
+                                        </div>
+                                    </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank" href="https://mp.weixin.qq.com/s/66tnk5xqvsrlJmoTy9jS5g" class="span_a" style="">3款你必须知道的爬虫工具</a>
+                                            <em style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+                                        </div>
+                                        <div class="wz2">博主将提供小工具的获取方式
+                                        </div>
+                                    </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank" href="https://mp.weixin.qq.com/s/I7_Q-WO1lX9GOe5r2jsJsQ" class="span_a" style="">任意爬取！超全开源爬虫工具箱</a>
+                                            <em style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+                                        </div>
+                                        <div class="wz2">国内一位开发者在 GitHub 上开源了个集众多数据源于一身的爬虫工具箱——InfoSpider
+                                        </div>
+                                    </div>
+                                </section>
+                                <!-- 开发实战 -->
+                                <section class="section_k">
+                                    <h5>开发实战<span style="font-size: 12px;color: gray;padding-left: 30px;">Forewarned is
+                                            forearmed, without prejudging the waste.</span>
+                                    </h5>
+                                    <div class="content" style="color: #009999;">
+                                        <div class="wz_n wz" style="font-size: 14px;">文章标题</div>
+                                        <div class="wz_n wz2" style="font-size: 14px;">文章介绍</div>
+                                    </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank" href="https://mp.weixin.qq.com/s/0FNDkDzW9IU4L7rzfloj_g"
+                                                class="span_a" style="">So easy 用 Python 开发一个todolist</a>
+                                            <em style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+                                        </div>
+                                        <div class="wz2">凡事预则立，不预则废
+                                        </div>
+                                    </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank" href="https://pythondict.com/web-design/python-django/" class="span_a" style="">Python Django快速开发音乐高潮提取网(1)</a>
+                                            <em style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+                                        </div>
+                                        <div class="wz2">这篇文章是一个意外，生活总是充满着戏剧性
+                                        </div>
+                                    </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank" href="https://pythondict.com/web-design/django-oscar-ecommerce/" class="span_a" style="">Django-oscar 快速搭建商城网站</a>
+                                            <em style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+                                        </div>
+                                        <div class="wz2">像豆瓣、Instagram，Spotify，YouTube等官方网站都是基于Django搭建的
+                                        </div>
+                                    </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank" href="" class="span_a" style="">11</a>
+                                            <em style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+                                        </div>
+                                        <div class="wz2">
+                                        </div>
+                                    </div>
+                                </section>
+                                <!-- csdn -->
+                                <section class="section_k">
+                                    <h5>CSDN<span style="font-size: 12px;color: gray;padding-left: 30px;">Even if you
+                                            spend a lot of time doing what you love, it's worth it.</span>
+                                    </h5>
+                                    <div class="content" style="color: #009999;">
+                                        <div class="wz_n wz" style="font-size: 14px;">文章标题</div>
+                                        <div class="wz_n wz2" style="font-size: 14px;">文章介绍</div>
+                                    </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank"
+                                                href="https://blog.csdn.net/weixin_45949781/article/details/103326222?utm_source=app"
+                                                class="span_a" style="">Anaconda安装详解、配置清华镜像和常用命令行集锦</a>
+                                            <em style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+                                        </div>
+                                        <div class="wz2">Anaconda是一个开源的Python发行版本，集成了conda包管理工具和大部分Python核心科学包和依赖项
+                                        </div>
+                                    </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank"
+                                                href="https://blog.csdn.net/weixin_47139649/article/details/109116992"
+                                                class="span_a" style="">最简单方法！！用python生成动态条形图（解决报错问题！）</a>
+                                            <em style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;python基础教程</em>
+                                        </div>
+                                        <div class="wz2">写东西，最怕的就是报错了
+                                        </div>
+                                    </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank"
+                                                href="https://blog.csdn.net/u012722531/article/details/79814632?utm_source=app"
+                                                class="span_a" style="">python中的类及self详解</a>
+                                            <em style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+                                        </div>
+                                        <div class="wz2">面向对象最重要的概念就是类（class）和实例（instance），类是抽象的模板
+                                        </div>
+                                    </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank"
+                                                href="https://blog.csdn.net/qq_40774175/article/details/81273198?utm_source=app"
+                                                class="span_a" style="">Python 爬虫系列教程一爬取批量百度图片</a>
+                                            <em style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+                                        </div>
+                                        <div class="wz2">先点击右上角，切换成传统翻页版，因为这样有利于我们爬取图片（这篇文章关注度好高，值得学习）
+                                        </div>
+                                    </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank"
+                                                href="https://blog.csdn.net/chouchoubuchou/article/details/108394124"
+                                                class="span_a" style="">爬虫之网页数据提取</a>
+                                            <em style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+                                        </div>
+                                        <div class="wz2">爬虫之路，任重而道远
+                                        </div>
+                                    </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank"
+                                                href="https://blog.csdn.net/ys201972/article/details/103818865"
+                                                class="span_a" style="">python爬取图虫网图片</a>
+                                            <em style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+                                        </div>
+                                        <div class="wz2"><a target="_blank" href=""
+                                                class="span_a">网站：https://stock.tuchong.com/</a>
+                                        </div>
+                                    </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank"
+                                                href="https://blog.csdn.net/H_biubiu/article/details/106100656"
+                                                class="span_a" style="">[pyecharts1.7] 坐标轴设置：X轴、Y轴通用</a>
+                                            <em style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+                                        </div>
+                                        <div class="wz2">这不得关注一手吗
+                                        </div>
+                                    </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank"
+                                                href="https://blog.csdn.net/weixin_41282397/article/details/87777572"
+                                                class="span_a" style="">Navicat Premium12下载、激活、过期解决方法——永久使用(亲测)</a>
+                                            <em style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+                                        </div>
+                                        <div class="wz2">对于这个问题，我的建议是一定要找对方法，这样才治本
+                                        </div>
+                                    </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank" href="" class="span_a" style=""></a>
+                                            <em style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+                                        </div>
+                                        <div class="wz2">
+                                        </div>
+                                    </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank" href="" class="span_a" style=""></a>
+                                            <em style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+                                        </div>
+                                        <div class="wz2">
+                                        </div>
+                                    </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank" href="" class="span_a" style=""></a>
+                                            <em style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+                                        </div>
+                                        <div class="wz2">
+                                        </div>
+                                    </div>
+                                </section>
+                                <!-- 简书python -->
+                                <section class="section_k">
+                                    <h5>简书-Python<span style="font-size: 12px;color: gray;padding-left: 30px;">The short
+                                            book, for me, is not only a tool for learning Python, but also a
+                                            feeling.</span>
+                                    </h5>
+                                    <div class="content" style="color: #009999;">
+                                        <div class="wz_n wz" style="font-size: 14px;">文章标题</div>
+                                        <div class="wz_n wz2" style="font-size: 14px;">文章介绍</div>
+                                    </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank" href="https://www.jianshu.com/p/f6bcb0a58f7d"
+                                                class="span_a" style="">用Python爬取猫眼电影排行榜TOP100</a>
+                                            <em style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;小董不太懂
+                                            </em>
+                                        </div>
+                                        <div class="wz2">访问网站，获取页面源码，解析页面，得到想要的数据，循环爬取多个页面，把数据写入本地文件
+                                        </div>
+                                    </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank" href="https://www.jianshu.com/p/8b4d9ca571e6"
+                                                class="span_a" style="">VSCode 基础必备插件</a>
+                                            <em style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+                                        </div>
+                                        <div class="wz2">基础必备插件，你值得拥有
+                                        </div>
+                                    </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank" href="https://www.jianshu.com/p/6d53a34c287d"
+                                                class="span_a" style="">GitHub免费搭建个人博客或网站</a>
+                                            <em style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+                                        </div>
+                                        <div class="wz2">目前所做的一切就是为了这个的实现，加油
+                                        </div>
+                                    </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank" href="" class="span_a" style=""></a>
+                                            <em style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+                                        </div>
+                                        <div class="wz2">
+                                        </div>
+                                    </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank" href="" class="span_a" style=""></a>
+                                            <em style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+                                        </div>
+                                        <div class="wz2">
+                                        </div>
+                                    </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank" href="" class="span_a" style=""></a>
+                                            <em style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+                                        </div>
+                                        <div class="wz2">
+                                        </div>
+                                    </div>
+                                </section>
+                                <!-- 知乎python -->
+                                <section class="section_k">
+                                    <h5>知乎-Python<span style="font-size: 12px;color: gray;padding-left: 30px;">Zhihu,
+                                            know not to share, that the so-called know and what is the meaning
+                                            of.</span>
+                                    </h5>
+                                    <div class="content" style="color: #009999;">
+                                        <div class="wz_n wz" style="font-size: 14px;">文章标题</div>
+                                        <div class="wz_n wz2" style="font-size: 14px;">文章介绍</div>
+                                    </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank" href="https://www.zhihu.com/question/353341563"
+                                                class="span_a" style="">Python 应该怎么学？</a>
+                                            <em style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+                                        </div>
+                                        <div class="wz2">社区答疑，每当你快要放弃的时候看一下，你会很有收获的
+                                        </div>
+                                    </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank" href="https://zhuanlan.zhihu.com/p/58314015"
+                                                class="span_a" style="">如何用 Python 和 Pandas 分析犯罪记录开放数据</a>
+                                            <em style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+                                        </div>
+                                        <div class="wz2">用 Python 和数据分析包 Pandas 对该数据集进行分析和可视化(有点难)
+                                        </div>
+                                    </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank" href="https://zhuanlan.zhihu.com/p/47712427"
+                                                class="span_a" style="">简单爬虫：猫眼电影TOP100榜单爬取（python_009)</a>
+                                            <em style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;数据分析入门009</em>
+                                        </div>
+                                        <div class="wz2"><a target="_blank" href="https://maoyan.com/board/4"
+                                                class="span_a">目标网址：TOP100榜 - 猫眼电影 - 一网打尽好电影</a>
+                                        </div>
+                                    </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank" href="https://zhuanlan.zhihu.com/p/34354440"
+                                                class="span_a" style="">利用python爬取网易云音乐，并把数据存入mysql</a>
+                                            <em style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;
+                                                Python程序员</em>
+                                        </div>
+                                        <div class="wz2">获取本文代码方式：关注Python爱好者社区，回复网易云
+                                        </div>
+                                    </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank" href="https://zhuanlan.zhihu.com/p/144320715"
+                                                class="span_a" style="">https://zhuanlan.zhihu.com/p/144320715</a>
+                                            <em style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+                                        </div>
+                                        <div class="wz2">文章被建议修改：不规范转载（作者修改内容通过后，文章会重新显示）
+                                        </div>
+                                    </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank" href="https://zhuanlan.zhihu.com/p/107741668"
+                                                class="span_a" style="">我写CSS的常用套路(附demo的效果实现与源码）</a>
+                                            <em style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+                                        </div>
+                                        <div class="wz2">本文是笔者写CSS时常用的套路。不论效果再怎么华丽，万变不离其宗
+                                        </div>
+                                    </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank" href="" class="span_a" style=""></a>
+                                            <em style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+                                        </div>
+                                        <div class="wz2">
+                                        </div>
+                                    </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank" href="" class="span_a" style=""></a>
+                                            <em style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+                                        </div>
+                                        <div class="wz2">
+                                        </div>
+                                    </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank" href="" class="span_a" style=""></a>
+                                            <em style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+                                        </div>
+                                        <div class="wz2">
+                                        </div>
+                                    </div>
+                                </section>
+                                <!-- 博客园 -->
+                                <section class="section_k">
+                                    <h5>博客园<span style="font-size: 12px;color: gray;padding-left: 30px;">Blog Garden,
+                                            you are a microcosm of thousands of programming platforms. Although you are
+                                            defeated, you are always full of fragrance.</span>
+                                    </h5>
+                                    <div class="content" style="color: #009999;">
+                                        <div class="wz_n wz" style="font-size: 14px;">文章标题</div>
+                                        <div class="wz_n wz2" style="font-size: 14px;">文章介绍</div>
+                                    </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank" href="https://www.cnblogs.com/greemmao/p/13951275.html"
+                                                class="span_a" style="">Python函数中如何返回多个值</a>
+                                            <em style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+                                        </div>
+                                        <div class="wz2">可以通过多种方法，从一个函数中返回多个值
+                                        </div>
+                                    </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank" href="https://www.cnblogs.com/Cheryol/p/13522899.html"
+                                                class="span_a" style="">使用Pandas读取Excel、csv、mysql等文件存入到MySQL
+                                            </a>
+                                            <em style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+                                        </div>
+                                        <div class="wz2">Pandas读取数据-对数据做过滤、统计分析Pandas将数据存储到MySQL，进一步的SQL分析
+                                        </div>
+                                    </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank" href="" class="span_a" style=""></a>
+                                            <em style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+                                        </div>
+                                        <div class="wz2">
+                                        </div>
+                                    </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank" href="" class="span_a" style=""></a>
+                                            <em style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+                                        </div>
+                                        <div class="wz2">
+                                        </div>
+                                    </div>
+                                </section>
+                                <!-- 更新 -->
+                                <section class="section_k">
+                                    <h5>更新中...<span style="font-size: 12px;color: gray;padding-left: 30px;">Look for one
+                                            thing, it is necessary to do inexhaustible force, so that there will be
+                                            harvest.</span>
+                                    </h5>
+                                    <div class="content" style="color: #009999;">
+                                        <div class="wz_n wz" style="font-size: 14px;">文章标题</div>
+                                        <div class="wz_n wz2" style="font-size: 14px;">文章介绍</div>
+                                    </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank" href="" class="span_a" style=""></a>
+                                            <em style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+                                        </div>
+                                        <div class="wz2">
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                        </li>
+                        <!-- 常用模块 -->
+                        <li data-content="store" style="height: 100%;width: 1180px;padding-left: 0;">
+                            <div class="box" style="height: 468px;">
+                                <h5 class="h_c" style="">Python模块<span
+                                    style="font-size: 12px;color: gray;padding-left: 30px;">In my mind, the commonly used modules have these 12 enough</span>
+                                <span id="show_time"
+                                    style="float: right;display: inline-block;margin-right: 50px;"></span>
+                            </h5>
+                                <div id="container" class="clearfix">
+                                    <section class="cymk">
+                                        <div class="img"><a target="_blank" href="https://www.pypandas.cn/" class="span_a">Pandas</a></div>
+                                        <p>
+                                            <span>An extension library of Python language for data analysis.</span><br><br>
+                                            <i>I am crazy about Pandas</i>
+                                        </p>
+                                    </section>
+                                    <section class="cymk">
+                                        <div class="img"><a target="_blank" href="https://pyecharts.org/#/" class="span_a">Pyecharts</a></div>
+                                        <p>
+                                            <span>A Python Echarts Plotting Library.</span><br><br>
+                                            <i>Data visualization requires it</i>
+                                        </p>
+                                    </section>
+                                    <section class="cymk">
+                                        <div class="img"><a target="_blank" href="https://docs.python-requests.org/zh_CN/latest/" class="span_a">Requests</a></div>
+                                        <p>
+                                            <span>A simple and easy to use HTTP library implemented by python.</span><br><br>
+                                            <i>A library of necessary learning for crawlers</i>
+                                        </p>
+                                    </section>
+                                    <section class="cymk">
+                                        <div class="img"><a target="_blank" href="https://matplotlib.org/" class="span_a">Matplotlib</a></div>
+                                        <p>
+                                            <span>Visualization with Python.</span><br><br>
+                                            <i>Sample plots in Matplotlib</i>
+                                        </p>
+                                    </section>
+                                    <section class="cymk">
+                                        <div class="img"><a target="_blank" href="http://www.srcmini.com/31294.html" class="span_a">Pygame</a></div>
+                                        <p>
+                                            <span></span><br><br>
+                                            <i></i>
+                                        </p>
+                                    </section>
+                                    <section class="cymk">
+                                        <div class="img"><a target="_blank" href="https://ipython.readthedocs.io/en/stable/" class="span_a">IPython</a></div>
+                                        <p>
+                                            <span></span><br><br>
+                                            <i></i>
+                                        </p>
+                                    </section>
+                                    <section class="cymk">
+                                        <div class="img"><a target="_blank" href="https://www.numpy.org.cn/" class="span_a">NumPy</a></div>
+                                        <p>
+                                            <span></span><br><br>
+                                            <i></i>
+                                        </p>
+                                    </section>
+                                    <section class="cymk">
+                                        <div class="img"><a target="_blank" href="https://beautifulsoup.readthedocs.io/zh_CN/v4.4.0/" class="span_a">BeautifulSoup</a></div>
+                                        <p>
+                                            <span></span><br><br>
+                                            <i></i>
+                                        </p>
+                                    </section>
+                                    <section class="cymk">
+                                        <div class="img"><a target="_blank" href="" class="span_a"></a></div>
+                                        <p>
+                                            <span></span><br><br>
+                                            <i></i>
+                                        </p>
+                                    </section>
+                                    <section class="cymk">
+                                        <div class="img"><a target="_blank" href="" class="span_a"></a></div>
+                                        <p>
+                                            <span></span><br><br>
+                                            <i></i>
+                                        </p>
+                                    </section>
+                                    <section class="cymk">
+                                        <div class="img"><a target="_blank" href="" class="span_a"></a></div>
+                                        <p>
+                                            <span></span><br><br>
+                                            <i></i>
+                                        </p>
+                                    </section>
+                                    <section class="cymk">
+                                        <div class="img"><a target="_blank" href="" class="span_a"></a></div>
+                                        <p>
+                                            <span></span><br><br>
+                                            <i></i>
+                                        </p>
+                                    </section>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- github -->
+                        <li data-content="settings" style="padding-left: 0;height: 100%;width: 1180px;padding-right: 0;">
+                            <div class="fleft" style="cursor: pointer;" id="d2">
+                                <span class="s_click" onclick="setTab2(0)" style="">My Github</span>
+                                <span onclick="setTab2(1)">Py GitHub</span>
+                                <!-- <span onclick="setTab2(2)"></span> -->
+                            </div>
+                            <script>
+                                //暂时只能实现分页，但是不能实现左右切换的功能
+                                function setTab2(n) { //
+                                    var tli = document.getElementById("d2").getElementsByTagName("span");//控制标题的显示与遮盖
+                                    var mli = document.getElementById("cut2").getElementsByTagName("section");//控制标题时，对应内容的显示与遮盖
+                                    for (i = 0; i < tli.length; i++) {
+                                        tli[i].className = (i == n) ? "s_click" : "";
+                                        mli[i].style.display = (i == n) ? "block" : "none";
+                                    }
+                                }
+                            </script>
+                            <div class="show box" style="height: 530px;float: left;;width: 1080px;margin-right: 20px;"
+                            id="cut2">
+                                <!-- 可以分为我的github，大佬的github -->
+                                <section class="block section_k">
+                                    <h5 style="margin-bottom: 30px;">My Github<span style="font-size: 12px;color: gray;padding-left: 30px;">As of today, my GitHub has officially set sail.</span>
+                                    </h5>
+                                    <!-- <div class="content" style="color: #009999;">
+                                        <div class="wz_n wz" style="font-size: 14px;">项目地址</div>
+                                        <div class="wz_n wz2" style="font-size: 14px;">项目介绍</div>
+                                    </div> -->
+                                    <div class="menulist"> <a href="https://github.com/git123hub121/Python-analysis" one-link-mark="yes" target="_blank">
+                                        <h3>Python-analysis</h3>
+                                        <p>我的Python数据分析实战项目<br>
+                                            <i class="i">Jupyter Notebook</i>
+                                        </p>
+                                        
+                                    </a> </div>
+                                    <div class="menulist"> <a href="https://github.com/git123hub121/Python-spider" one-link-mark="yes" target="_blank">
+                                        <h3>Python-spider</h3>
+                                        <p>我的python爬虫
+                                            <br>
+                                            <i class="i">Python</i>
+                                        </p>
+                                        
+                                    </a> </div>
+                                    <div class="menulist"> <a href="https://github.com/git123hub121/Python-Practicalcase" one-link-mark="yes" target="_blank">
+                                        <h3>Python-Practicalcase</h3>
+                                        <p>我的Python实用案例
+                                            <br>
+                                            <i class="i">Python</i>
+                                        </p>
+                                    </a> </div>
+                                    <div class="menulist"> <a href="https://github.com/git123hub121/Python-project" one-link-mark="yes" target="_blank">
+                                        <h3>Python-project</h3>
+                                        <p>python项目集锦
+                                            <br>
+                                            <i class="i">Jupyter Notebook</i>
+                                        </p>
+                                    </a> </div>
+                                    <div class="menulist"> <a href="https://github.com/git123hub121/Pandas" one-link-mark="yes" target="_blank">
+                                        <h3>Pandas</h3>
+                                        <p>Pandas数据分析
+                                            <br>
+                                            <i class="i">Jupyter Notebook</i>
+                                        </p>
+                                    </a> </div>
+                                    <div class="menulist"> <a href="https://github.com/git123hub121/Python-basickonwledge" one-link-mark="yes" target="_blank">
+                                        <h3>Python-basickonwledge</h3>
+                                        <p>Python基础知识
+                                            <br>
+                                            <i class="i">Python</i>
+                                        </p>
+                                    </a> </div>
+                                    <div class="menulist"> <a href="https://github.com/git123hub121/Python-dataResorse" one-link-mark="yes" target="_blank">
+                                        <h3>Python-dataResorse</h3>
+                                        <p>Python数据集
+                                            <br>
+                                            <i class="i">HTML</i>
+                                        </p>
+                                    </a> </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank" href="" class="span_a" style=""></a>
+                                            <em style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+                                        </div>
+                                        <div class="wz2">
+                                        </div>
+                                    </div>
+                                </section>
+                                <section class="section_k">
+                                    <h5>Py Github<span style="font-size: 12px;color: gray;padding-left: 30px;">This is someone else's github work, worth learning from, open source, let's share the technology or code.</span>
+                                    </h5>
+                                    <div class="content" style="color: #009999;">
+                                        <div class="wz_n wz" style="font-size: 14px;">项目地址</div>
+                                        <div class="wz_n wz2" style="font-size: 14px;">项目介绍</div>
+                                    </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank"
+                                                href="https://github.com/cassieeric/python_crawler/tree/master/meituan_huoguo/"
+                                                class="span_a" style="">https://github.com/cassieeric/</a>
+                                            <em style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+                                        </div>
+                                        <div class="wz2">爬取美团火锅相关信息
+                                        </div>
+                                    </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank" href="https://github.com/codedrinker/irobot"
+                                                class="span_a" style="">https://github.com/codedrinker/irobot</a>
+                                            <em style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+                                        </div>
+                                        <div class="wz2">不详...
+                                        </div>
+                                    </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank" href="https://github.com/Tobby-star/music_163"
+                                                class="span_a" style="">https://github.com/Tobby-star/music_163</a>
+                                            <em style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+                                        </div>
+                                        <div class="wz2">网易云数据分析源码地址
+                                        </div>
+                                    </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank" href="https://github.com/wesm/pydata-book" class="span_a"
+                                                style="">https://github.com/wesm/pydata-book</a>
+                                            <em style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+                                        </div>
+                                        <div class="wz2">pydata-book
+                                        </div>
+                                    </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank"
+                                                href="https://github.com/michaelliao/awesome-python3-webapp"
+                                                class="span_a"
+                                                style="">https://github.com/michaelliao/awesome-python3-webapp</a>
+                                            <em style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+                                        </div>
+                                        <div class="wz2">awesome-python3-webapp
+                                        </div>
+                                    </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank"
+                                                href="https://github.com/SaekiRaku/vscode-rainbow-fart/tree/master/src/built-in-voice-packages/built-in-voice-chinese"
+                                                class="span_a" style="">SaekiRaku
+                                                /vscode-rainbow-fart</a>
+                                            <em style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+                                        </div>
+                                        <div class="wz2">SaekiRaku/vscode-rainbow-fart
+                                        </div>
+                                    </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank" href="https://github.com/Python3WebSpider" class="span_a"
+                                                style="">
+                                                Python3WebSpider</a>
+                                            <em style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+                                        </div>
+                                        <div class="wz2">
+                                            Python3WebSpider，关于爬虫的，感觉很流弊
+                                        </div>
+                                    </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank" href="https://codechina.csdn.net/qq_42279468/python_pet2_liqiujian" class="span_b" style="">Python制作新一款智能桌宠
+                                            </a>
+                                            <em style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+                                        </div>
+                                        <div class="wz2">首先我们只做桌宠的目的是为了方便操作电脑
+                                        </div>
+                                    </div>
+                                    <div class="content" style="height: 32px;">
+                                        <div class="wz">
+                                            <a target="_blank" href="https://github.com/hardikkamboj/An-Introduction-to-Statistical-Learning" class="span_a" style="">An-Introduction-to-Statistical-Learning
+                                            </a>
+                                            <em style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+                                        </div>
+                                        <div class="wz2">关于算法统计的pdf
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                        </li>
+                        <!-- 数据源 -->
+                        <li data-content="trash">
+                            <div class="box">
+                                <h5 style="margin-bottom: 30px;" id="popbr">Data Source<span style="font-size: 12px;color: gray;padding-left: 30px;">I hope to find the source data or source code and the exchanges of the open source community here.</span>
+                                </h5>
+                                <div class="content1">
+                                    <span style="font-size: 14px;">
+                                        <!--  -->
+                                        <a href="https://gitee.com/lvyeyou/DaShuJuZhiDaPingZhanShi/tree/master"
+                                            class="span_a" style="margin-left: 10px;" target="_blank">Lang / 大屏数据展示模板
+                                        </a></span>
+                                </div>
+                                <div class="content1">
+                                    <span style="font-size: 14px;"><a target="_blank"
+                                            href="http://doc.gopup.cn/#/data/index_data" class="span_a"  style="margin-left: 10px;">指数数据
+                                        </a></span>
+                                </div>
+                                <div class="content1">
+                                    <span style="font-size: 14px;"><a target="_blank"
+                                            href="https://www.oschina.net/project" class="span_c"
+                                            style="margin-left: 10px;">开源软件-OSCHINA
+                                        </a></span>
+                                </div>
+                                <div class="content1">
+                                    <span style="font-size: 14px;"><a target="_blank"
+                                            href="https://www.heywhale.com/home" class="span_a"
+                                            style="margin-left: 10px;">和鲸社区
+                                        </a></span>
+                                </div>
+                                <div class="content1">
+                                    <span style="font-size: 14px;"><a target="_blank"
+                                            href="https://gitee.com/52itstyle/visual-large-screen" class="span_a"
+                                            style="margin-left: 10px;">小柒2012 / 大数据可视化大屏模板
+                                        </a></span>
+                                </div>
+                                <div class="content1">
+                                    <span style="font-size: 14px;"><a target="_blank"
+                                            href="https://cs.lianjia.com/" class="span_a"
+                                            style="margin-left: 10px;">链家网
+                                        </a></span>
+                                </div>
+                                <div class="content1">
+                                    <span style="font-size: 14px;"><a target="_blank"
+                                            href="https://www.douban.com/" class="span_c"
+                                            style="margin-left: 10px;">豆瓣影评-书评-TOP
+                                        </a></span>
+                                </div>
+                                <div class="content1">
+                                    <span style="font-size: 14px;"><a target="_blank"
+                                            href="http://58921.com/alltime/" class="span_a"
+                                            style="margin-left: 10px;">电影票房
+                                        </a></span>
+                                </div>
+                                <div class="content1">
+                                    <span style="font-size: 14px;"><a target="_blank"
+                                            href="https://www.shanghairanking.cn/" class="span_a"
+                                            style="margin-left: 10px;">软科-高等教育评价
+                                        </a></span>
+                                </div>
+                                <div class="content1">
+                                    <span style="font-size: 14px;"><a target="_blank"
+                                            href="http://www.shujuquan.com.cn/" class="span_a"
+                                            style="margin-left: 10px;">数据圈
+                                        </a></span>
+                                </div>
+                                <div class="content1">
+                                    <span style="font-size: 14px;"><a target="_blank"
+                                            href="http://www.55188.com" class="span_c"
+                                            style="margin-left: 10px;">理想在线
+                                        </a></span>
+                                </div>
+                                <div class="content1">
+                                    <span style="font-size: 14px;"><a target="_blank"
+                                            href="http://www.cninfo.com.cn/" class="span_a"
+                                            style="margin-left: 10px;">巨潮信息网
+                                        </a></span>
+                                </div>
+                                <div class="content1">
+                                    <span style="font-size: 14px;"><a target="_blank"
+                                            href="https://data.stats.gov.cn/" class="span_a"
+                                            style="margin-left: 10px;">国家数据
+                                        </a></span>
+                                </div>
+                                <div class="content1">
+                                    <span style="font-size: 14px;"><a target="_blank"
+                                            href="http://www.pbc.gov.cn/" class="span_a"
+                                            style="margin-left: 10px;">中国人民银行  
+                                        </a></span>
+                                </div>
+                                <div class="content1">
+                                    <span style="font-size: 14px;"><a target="_blank"
+                                            href="http://www.miit.gov.cn" class="span_b"
+                                            style="margin-left: 10px;">工业和信息化部
+                                        </a></span>
+                                </div>
+                                <div class="content1">
+                                    <span style="font-size: 14px;"><a target="_blank"
+                                            href="http://www.sipo.gov.cn/" class="span_a"
+                                            style="margin-left: 10px;">国家知识产权局
+                                        </a></span>
+                                </div>
+                                <div class="content1" style="width: 620px;">
+                                    <span style="font-size: 14px;"><a target="_blank"
+                                            href="http://www.oecd.org/" class="span_d"
+                                            style="margin-left: 10px;">经济合作与发展组织（Organization of Economic Cooperation and Development -OECD）
+                                        </a></span>
+                                </div>
+                                <div class="content1" style="width: 420px;">
+                                    <span style="font-size: 14px;"><a target="_blank"
+                                            href="https://www.imf.org/" class="span_a"
+                                            style="margin-left: 10px;">国际货币基金组织（International Monetary Fund -IMF）
+                                        </a></span>
+                                </div>
+                                <div class="content1">
+                                    <span style="font-size: 14px;"><a target="_blank"
+                                            href="http://www.cnnic.net.cn/" class="span_a"
+                                            style="margin-left: 10px;">中国互联网络信息中心
+                                        </a></span>
+                                </div>
+                                <div class="content1">
+                                    <span style="font-size: 14px;"><a target="_blank"
+                                            href="http://index.baidu.com/" class="span_a"
+                                            style="margin-left: 10px;">百度指数
+                                        </a></span>
+                                </div>
+                                <div class="content1">
+                                    <span style="font-size: 14px;"><a target="_blank"
+                                            href="http://www.iyiou.com/" class="span_c"
+                                            style="margin-left: 10px;">亿欧网
+                                        </a></span>
+                                </div>
+                                <div class="content1">
+                                    <span style="font-size: 14px;"><a target="_blank"
+                                            href="http://hao.199it.com/" class="span_a"
+                                            style="margin-left: 10px;">大数据导航
+                                        </a></span>
+                                </div>
+                            </div>
+                        </li>
+                    </ul> <!-- cd-tabs-content -->
+                </div> <!-- cd-tabs -->
+            </div>
+            <div style="float: right;width: 24%;height: auto;margin-right: -6px;">
+                <div class="tm-bg-gray tm-video-details" style="z-index: 999;">
+                    <div class="text-center mb-5">
+                        <a target="_blank" href="https://baike.baidu.com/" class="btn btn-primary tm-btn-big">百度百科</a>
+                    </div>
+                    <div class="mb-4">
+                        <h3 class="tm-text-gray-dark mb-3">Python （计算机编程语言）</h3>
+                        <p>Python由荷兰数学和计算机科学研究学会的Guido van Rossum 于1990 年代初设计，作为一门叫做ABC语言的替代品。
+                            <br>[1] Python提供了高效的高级数据结构，还能简单有效地面向对象编程。Python语法和动态类型，以及解释型语言的本质，使它成为多数平台上写脚本和快速开发应用的编程语言，
+                            <br>[2] 随着版本的不断更新和语言新功能的添加，逐渐被用于独立的、大型项目的开发。
+                            <br>[3]Python解释器易于扩展，可以使用C或C++（或者其他可以通过C调用的语言）扩展新的功能和数据类型。
+                            <br>[4] Python 也可用于可定制化软件中的扩展程序语言。Python丰富的标准库，提供了适用于各个主要系统平台的源码或机器码。
+                        </p>
+                    </div>
+                    <div>
+                        <h3 class="tm-text-gray-dark mb-3">Links</h3>
+                        <a target="_blank" href="https://baike.baidu.com/item/Python/407313?fr=aladdin#1"
+                            class="tm-text-primary mr-4 mb-2 d-inline-block">发展历程</a>
+                        <a target="_blank" href="https://baike.baidu.com/item/Python/407313?fr=aladdin#2"
+                            class="tm-text-primary mr-4 mb-2 d-inline-block">语言特点</a>
+                        <a target="_blank" href="https://baike.baidu.com/item/Python/407313?fr=aladdin#3"
+                            class="tm-text-primary mr-4 mb-2 d-inline-block">基本语法</a>
+                        <a target="_blank" href="https://baike.baidu.com/item/Python/407313?fr=aladdin#4"
+                            class="tm-text-primary mr-4 mb-2 d-inline-block">帮助</a>
+                        <a target="_blank" href="https://baike.baidu.com/item/Python/407313?fr=aladdin#5"
+                            class="tm-text-primary mr-4 mb-2 d-inline-block">接口</a>
+                        <a target="_blank" href="https://baike.baidu.com/item/Python/407313?fr=aladdin#6"
+                            class="tm-text-primary mr-4 mb-2 d-inline-block">应用领域</a>
+                        <a target="_blank" href="https://baike.baidu.com/item/Python/407313?fr=aladdin#7"
+                            class="tm-text-primary mr-4 mb-2 d-inline-block">开发工具</a>
+                        <a target="_blank" href="https://baike.baidu.com/item/Python/407313?fr=aladdin#8"
+                            class="tm-text-primary mr-4 mb-2 d-inline-block">标准库</a>
+                        <a target="_blank" href="https://baike.baidu.com/item/Python/407313?fr=aladdin#9"
+                            class="tm-text-primary mr-4 mb-2 d-inline-block">开发环境</a>
+                        <a target="_blank" href="https://baike.baidu.com/item/Python/407313?fr=aladdin#10"
+                            class="tm-text-primary mr-4 mb-2 d-inline-block">著名应用</a>
+                        <a target="_blank" href="https://baike.baidu.com/item/Python/407313?fr=aladdin#11"
+                            class="tm-text-primary mr-4 mb-2 d-inline-block">学习网站</a>
+                        <a target="_blank" href="https://baike.baidu.com/item/Python/407313?fr=aladdin#12"
+                            class="tm-text-primary mr-4 mb-2 d-inline-block">下载安装</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <marquee behavior="" direction=""><span style="font-size: 12px;">人生苦短，我学Python. Life is short, But I
+                        learn Python</span></marquee>
+            </div>
+        </div>
+
+    </div>
+
+    </div> <!-- container-fluid, tm-container-content -->
+
+<script src="js/plugins.js"></script>
+<script>
+    $("#container section").each(function() {
+        $(this).on('mouseenter', function(e) { //当鼠标移入元素对象边界内时，激活mouseenter事件。(不会冒泡）
+            var e = e || window.event;
+            var angle = direct(e, this)
+            mouseEvent(angle, this, 'in')
+        })
+        $(this).on('mouseleave', function(e) { //当鼠标移出元素对象边界内时，激活mouseleave事件。(不会冒泡)
+            var e = e || window.event;
+            var angle = direct(e, this)
+            mouseEvent(angle, this, 'off')
+        })
+    })
+    
+    function direct(e, o) {
+        var w = o.offsetWidth;
+        var h = o.offsetHeight;
+        var top = o.offsetTop; //包含滚动条滚动的部分
+        var left = o.offsetLeft;
+        var scrollTOP = document.body.scrollTop || document.documentElement.scrollTop;
+        var scrollLeft = document.body.scrollLeft || document.documentElement.scrollLeft;
+        var offTop = top - scrollTOP;
+        var offLeft = left - scrollLeft;
+        //console.log(offTop+";"+offLeft)
+        //e.pageX|| e.clientX;
+        //pageX 是从页面0 0 点开始  clientX是当前可视区域0 0开始  即当有滚动条时clientX  小于  pageX
+        //ie678不识别pageX
+        //PageY=clientY+scrollTop-clientTop;(只讨论Y轴,X轴同理,下同) 页面上的位置=可视区域位置+页面滚动条切去高度-自身border高度
+        var ex = (e.pageX - scrollLeft) || e.clientX;
+        var ey = (e.pageY - scrollTOP) || e.clientY;
+        var x = (ex - offLeft - w / 2) * (w > h ? (h / w) : 1);
+        var y = (ey - offTop - h / 2) * (h > w ? (w / h) : 1);
+    
+        var angle = (Math.round((Math.atan2(y, x) * (180 / Math.PI) + 180) / 90) + 3) % 4 //atan2返回的是弧度 atan2(y,x)
+        var directName = ["上", "右", "下", "左"];
+        return directName[angle]; //返回方向  0 1 2 3对应 上 右 下 左
+    }
+    
+    function mouseEvent(angle, o, d) { //方向  元素  鼠标进入/离开
+    
+        var w = o.offsetWidth;
+        var h = o.offsetHeight;
+    
+        if (d == 'in') {
+            switch (angle) {
+                case '上':
+                    $(o).find("p").css({
+                        left: 0,
+                        top: -h + "px"
+                    }).stop(true).animate({
+                        left: 0,
+                        top: 0
+                    }, 300)
+                    setTimeout(function() {
+                        $(o).find("p a").css({
+                            left: '50%',
+                            top: -h + "px"
+                        }).stop(true).animate({
+                            left: '50%',
+                            top: '20px'
+                        }, 300)
+                    }, 200)
+                    break;
+                case '右':
+                    $(o).find("p").css({
+                        left: w + "px",
+                        top: 0
+                    }).stop(true).animate({
+                        left: 0,
+                        top: 0
+                    }, 300)
+                    setTimeout(function() {
+                        $(o).find("p a").css({
+                            left: w + "px",
+                            top: '20px'
+                        }).stop(true).animate({
+                            left: '50%',
+                            top: '20px'
+                        }, 300)
+                    }, 200)
+                    break;
+                case '下':
+                    $(o).find("p").css({
+                        left: 0,
+                        top: h + "px"
+                    }).stop(true).animate({
+                        left: 0,
+                        top: 0
+                    }, 300)
+                    setTimeout(function() {
+                        $(o).find("p a").css({
+                            left: '50%',
+                            top: h + "px"
+                        }).stop(true).animate({
+                            left: '50%',
+                            top: '20px'
+                        }, 300)
+                    }, 200)
+                    break;
+                case '左':
+                    $(o).find("p").css({
+                        left: -w + "px",
+                        top: 0
+                    }).stop(true).animate({
+                        left: 0,
+                        top: 0
+                    }, 300)
+                    setTimeout(function() {
+                        $(o).find("p a").css({
+                            left: -w + "px",
+                            top: '20px'
+                        }).stop(true).animate({
+                            left: '50%',
+                            top: '20px'
+                        }, 300)
+                    }, 200)
+                    break;
+            }
+        } else if (d == 'off') {
+            switch (angle) {
+                case '上':
+                    $(o).find("p a").stop(true).animate({
+                        left: '50%',
+                        top: -h + "px"
+                    }, 300)
+                    setTimeout(function() {
+                        $(o).find("p").stop(true).animate({
+                            left: 0,
+                            top: -h + "px"
+                        }, 300)
+                    }, 200)
+                    break;
+                case '右':
+                    $(o).find("p a").stop(true).animate({
+                        left: w + "px",
+                        top: '20px'
+                    }, 300)
+                    setTimeout(function() {
+                        $(o).find("p").stop(true).animate({
+                            left: w + "px",
+                            top: 0
+                        }, 300)
+                    }, 200)
+                    break;
+                case '下':
+                    $(o).find("p a").stop(true).animate({
+                        left: '50%',
+                        top: h + "px"
+                    }, 300)
+                    setTimeout(function() {
+                        $(o).find("p").stop(true).animate({
+                            left: 0,
+                            top: h + "px"
+                        }, 300)
+                    }, 200)
+                    break;
+                case '左':
+                    $(o).find("p a").stop(true).animate({
+                        left: -w + "px",
+                        top: '20px'
+                    }, 300)
+                    setTimeout(function() {
+                        $(o).find("p").stop(true).animate({
+                            left: -w + "px",
+                            top: 0
+                        }, 300)
+                    }, 200)
+                    break;
+            }
+        }
+    }
+</script>
+
+    <script src="js/ax.min.js" type="text/javascript"></script><!-- 控制弹窗显示 -->
+<script>
+    $(document).ready(function () {
+        $('#popbr').axPopup({
+            title:'功能',
+            content:'功能还需要进一步的完善',
+            placement:'bottom-right',//对应a的内容
+        });
+    });
+</script>
+
+
+</body>
+
+</html>

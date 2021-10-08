@@ -1,0 +1,79 @@
+/* 控制弹窗显示 */
+.ax-popup {
+  min-width: 100px;
+  background-color: #29324e;
+  background-clip: padding-box;
+  -webkit-background-clip: padding-box;
+  border: 1px solid rgba(255, 196, 130, 0.06);
+  border-radius: 3px;
+  text-align: left;
+  white-space: normal;
+  padding: 0;
+  box-shadow: 0 5px 10px rgba(255, 196, 130, 0.06);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  display: none;
+}
+/* 弹窗内容 */
+.ax-popup .ax-popup-content {
+  max-width: 1000px;
+  max-height: 600px;
+  box-sizing: border-box;
+  padding: 14px;
+  display: block;
+}
+/* 弹窗标题 */
+.ax-popup-title {
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 38px;
+  background-color: #29324e;
+  padding: 0 14px;
+  margin: 0;
+  border-bottom: 1px solid rgba(255, 196, 130, 0.06);
+  border-radius: 3px 3px 0 0;
+}
+/* 弹窗距离button距离 */
+.ax-popup.ax-bottom-right {
+  margin-top: 6px;
+}
+/* 控制三角形显示 */
+.ax-popup > .ax-arrow,
+.ax-popup > .ax-arrow:after {
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  position: absolute;
+  display: block;
+}
+.ax-popup > .ax-arrow {
+  border-width: 8px;
+}
+.ax-popup > .ax-arrow:after {
+  content: "";
+  border-width: 8px;
+}
+/* 控制三角形的准确位置 */
+.ax-popup.ax-bottom > .ax-arrow,
+.ax-popup.ax-bottom-right > .ax-arrow,
+.ax-popup.ax-bottom-left > .ax-arrow {
+  margin-left: -8px;
+  border-bottom-color: rgba(255, 196, 130, 0.06);
+  border-top-width: 0;
+  top: -8px;
+  left: 50%;
+}
+/* 控制三角形样式 */
+.ax-popup.ax-bottom > .ax-arrow:after,
+.ax-popup.ax-bottom-right > .ax-arrow:after,
+.ax-popup.ax-bottom-left > .ax-arrow:after {
+  content: " ";
+  margin-left: -8px;
+  border-bottom-color: rgba(255, 196, 130, 0.06);
+  border-top-width: 0;
+  top: 1px;
+}
+

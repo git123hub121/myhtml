@@ -1,0 +1,62 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+ul {
+  width: 180px;
+  margin: 0 auto;
+  background: #fff;
+  position: relative;
+  z-index: 0;
+  padding: 60px 20px 70px;
+  list-style: none;
+}
+ul li {
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  border-bottom: 1px solid #f8f8f8;
+}
+ul li a {
+  color: #666;
+  display: block;
+}
+ul li a:hover {
+  color: #ff5f3e;
+  text-decoration: none;
+}
+ul li a.hover {
+  color: #ff5f3e;
+}
+#lanPos {
+  width: 225px;
+  height: 40px;
+  line-height: 40px;
+  background: #f8f8f8;
+  border-left: 5px solid #ff5f3e;
+  position: absolute;
+  left: -5px;
+  top: 0;
+  z-index: -1;
+  transition: top 0.2s;
+}
+a { margin: 0; padding: 0; border: 0; font-size: 100%; vertical-align: baseline; background: transparent; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.fl { float: left; display:inline-block;}
+.fr { float: right; display:inline-block;}
+
+.clearfix:after {
+visibility: hidden;
+display: block;
+font-size: 0;
+content: " ";
+clear: both;
+height: 0;
+}
+
+.clearfix { display: inline-table; }
+/* Hides from IE-mac \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+/* End hide from IE-mac */

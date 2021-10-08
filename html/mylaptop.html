@@ -1,0 +1,5038 @@
+<!--
+ * @Author: 你爸爸lzm
+ * @Date: 2021-05-01 18:15:13
+ * @Notes: 使用built命令快速得到一些常用的snippets,右击py文件可以preview代码
+ * @LastEditTime: 2021-09-21 14:15:26
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/mylaptop.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="css/style_p.css" />
+  <!--  -->
+  <script src="live2d-widget/autoload.js"></script>
+  <!-- 导入2d看板娘 -->
+  <title>mylaptop</title>
+  <style>
+    #github svg {
+      transition: all 1s;
+      fill: #222;
+      color: #fff;
+      position: absolute;
+      top: 0;
+      right: 0;
+      border: 0;
+      width: 80px;
+      height: 80px;
+    }
+
+    #github:hover svg {
+      width: 160px;
+      height: 160px;
+    }
+
+    /* #file_block {
+      border-radius: 5px;
+      border: 1px white solid;
+      position: fixed;
+      top: 10px;
+      right: 100px;
+      z-index: 100;
+      display: block;
+      width: 80px;
+      height: 30px;
+      text-align: center;
+      line-height: 30px;
+      cursor: pointer;cursor: pointer;
+    } */
+    #file {
+      width: 200px;
+      position: fixed;
+      top: 10px;
+      right: 50px;
+      z-index: 100;
+      opacity: 0.1;
+      /* border-radius: 5px;
+      border: 1px white solid;
+      background: #29324e; */
+      /* display: none; */
+    }
+
+    #canvas {
+      position: fixed;
+      right: 0;
+      bottom: 360px;
+      width: 290px;
+      height: 200px;
+    }
+
+    #audio {
+      position: fixed;
+      right: 10px;
+      bottom: 335px;
+      width: calc(290px - 20px);
+      height: 20px;
+    }
+  </style>
+</head>
+
+<body style="background: #29324e; padding: 0; margin: 0">
+  <!-- 我的主题 -->
+  <div class="left_t">
+    <h1 class="h1_a"><a href="###" style="color: white">MyResource</a></h1>
+  </div>
+  <!-- 我的导航 -->
+  <nav class="menu">
+    <ol>
+      <li id="content1" class="menu-item active">
+        <!--  -->
+        <a href="javascript:void(0);">WeChat Creators</a>
+      </li>
+      <li id="content2" class="menu-item">
+        <!-- 适合采用条目式 -->
+        <a href="javascript:void(0);">WeChat and Article</a>
+      </li>
+      <li id="content3" class="menu-item">
+        <!--  -->
+        <a href="javascript:void(0);">My CSDN</a>
+      </li>
+      <li id="content4" class="menu-item">
+        <!-- 需要采用新的格式 -->
+        <a href="javascript:void(0);">My Project</a>
+      </li>
+      <li id="content5" class="menu-item">
+        <!--  -->
+        <a href="javascript:void(0);">My PDF</a>
+      </li>
+      <li id="content6" class="menu-item">
+        <!--  -->
+        <a href="javascript:void(0);">My Lovemusic</a>
+      </li>
+    </ol>
+  </nav>
+  <!-- 显示目前的时间 -->
+  <div id="mytime" class="mytime"></div>
+  <!-- 我的主要内容 -->
+  <div class="container-div">
+    <h5 class="fix_h">
+      <a href="index.html" target="_blank" style="">返回首页</a>
+    </h5>
+    <!-- content1 -->
+    <div class="show text content1" id="cut">
+      <!-- 1 -->
+      <section class="section_f block">
+        <h3>
+          优质公众号 one<span style="font-size: 12px; color: gray; padding-left: 30px">Sometimes I have no direction and
+            power to write, but I still
+            have to insist, because I can't give up.</span>
+        </h3>
+        <!-- <div class="content" style="color: #009999;">
+                                        <div class="wzm_n wzm" style="font-size: 14px;">项目地址</div>
+                                        <div class="wzm_n wz2m" style="font-size: 14px;">项目介绍</div>
+                                    </div> -->
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="footer">
+          <!-- <marquee behavior="" direction="" style="margin-left: 470px;width: auto;"><span
+              style="font-size: 12px;"></span></marquee> -->
+        </div>
+      </section>
+      <section class="section_f">
+        <h3>
+          优质公众号 two<span style="font-size: 12px; color: gray; padding-left: 30px">Sometimes I have no direction and
+            power to write, but I still
+            have to insist, because I can't give up.</span>
+        </h3>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="footer">
+          <!-- <marquee behavior="" direction="" style="margin-left: 470px;width: auto;"><span
+              style="font-size: 12px;"></span></marquee> -->
+        </div>
+      </section>
+      <section class="section_f">
+        <h3>
+          优质公众号 three<span style="font-size: 12px; color: gray; padding-left: 30px">Sometimes I have no direction and
+            power to write, but I still
+            have to insist, because I can't give up.</span>
+        </h3>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="footer">
+          <!-- <marquee behavior="" direction="" style="margin-left: 470px;width: auto;"><span
+              style="font-size: 12px;"></span></marquee> -->
+        </div>
+      </section>
+      <section class="section_f">
+        <h3>
+          优质公众号 four<span style="font-size: 12px; color: gray; padding-left: 30px">Sometimes I have no direction and
+            power to write, but I still
+            have to insist, because I can't give up.</span>
+        </h3>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="footer">
+          <!-- <marquee behavior="" direction="" style="margin-left: 470px;width: auto;"><span
+              style="font-size: 12px;"></span></marquee> -->
+        </div>
+      </section>
+      <section class="section_f">
+        <h3>
+          优质公众号 five<span style="font-size: 12px; color: gray; padding-left: 30px">Sometimes I have no direction and
+            power to write, but I still
+            have to insist, because I can't give up.</span>
+        </h3>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="footer">
+          <!-- <marquee behavior="" direction="" style="margin-left: 470px;width: auto;"><span
+              style="font-size: 12px;"></span></marquee> -->
+        </div>
+      </section>
+      <div class="d_click" style="cursor: pointer; margin-bottom: 25px; margin-left: 100px" id="d">
+        <span class="s_click" onclick="setTab(0)" style="">1</span>
+        <span onclick="setTab(1)">2</span>
+        <span onclick="setTab(2)">3</span>
+        <span onclick="setTab(3)">4</span>
+        <span onclick="setTab(4)">5</span>
+        <span onclick="setTab(5)">...</span>
+      </div>
+      <script>
+        //暂时只能实现分页，但是不能实现左右切换的功能
+        function setTab(n) {
+          //
+          var tli = document.getElementById("d").getElementsByTagName("span"); //控制标题的显示与遮盖
+          var mli = document
+            .getElementById("cut")
+            .getElementsByTagName("section"); //控制标题时，对应内容的显示与遮盖
+          for (i = 0; i < tli.length; i++) {
+            tli[i].className = i == n ? "s_click" : "";
+            mli[i].style.display = i == n ? "block" : "none";
+          }
+        }
+      </script>
+    </div>
+    <!-- content2 -->
+    <div class="show text content2" id="cut4">
+      <section class="block section_f">
+        <div style="width: 100%; height: 10px"></div>
+        <h3>
+          法纳斯特<span style="font-size: 12px; color: gray; padding-left: 30px">Farnast, you are a close friend of mine who
+            studies Python. Is
+            that acceptable to you.</span>
+        </h3>
+        <div style="padding-left: 40px; padding-top: 10px">
+          <div class="content" style="color: #009999">
+            <div class="wz_n wzm" style="font-size: 14px">文章标题</div>
+            <div class="wz_n wz2m" style="font-size: 14px">文章介绍</div>
+          </div>
+          <div class="content" style="height: 32px">
+            <div class="wzm">
+              <a target="_blank" href="https://mp.weixin.qq.com/s/uqbAAcahIZSn88SyoTi-jA" class="span_a" style="">
+                超燃的文字云效果，用Python就能轻松get！</a><em style="font-size: 12px"></em>
+            </div>
+            <div class="wz2m">
+              词云图+stylecloud库绘制词云+wordcloud库绘制词云+pyecharts库的WordCloud绘制词云
+            </div>
+          </div>
+          <div class="content" style="height: 32px">
+            <div class="wzm">
+              <a target="_blank" href="https://mp.weixin.qq.com/s/guoUqoMX_JE10Oaiy2YYyA" class="span_a"
+                style="">Python数据可视化：25年GDP之变</a>
+              <em style="font-size: 12px"></em>
+            </div>
+            <div class="wz2m">实现了25年间各省市GDP数据的可视化</div>
+          </div>
+          <div class="content" style="height: 32px">
+            <div class="wzm">
+              <a target="_blank" href="https://mp.weixin.qq.com/s/vxgFTwwknbf7a2YgiRFMkA" class="span_a"
+                style="">Python数据可视化：网易云音乐歌单</a>
+              <em style="font-size: 12px">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+            </div>
+            <div class="wz2m">网易云歌单分析</div>
+          </div>
+          <div class="content" style="height: 32px">
+            <div class="wzm">
+              <a target="_blank" href="https://mp.weixin.qq.com/s/xq-nfytpTaboBwgQfxgiMQ" class="span_a"
+                style="">Python数据可视化：豆瓣电影TOP250</a>
+              <em style="font-size: 12px">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+            </div>
+            <div class="wz2m">
+              通过Scrapy框架，对豆瓣电影TOP250信息进行爬取
+            </div>
+          </div>
+          <div class="content" style="height: 32px">
+            <div class="wzm">
+              <a target="_blank" href="https://mp.weixin.qq.com/s/VpZM3ySwN_Yj7Ml5gJpgPw" class="span_a"
+                style="">做动态图表，没有数据？用Python就能获取！</a>
+              <em style="font-size: 12px">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+            </div>
+            <div class="wz2m">
+              聊一聊可视化视频的数据获取，主要是「百度指数」和「微博指数」
+            </div>
+          </div>
+          <div class="content" style="height: 32px">
+            <div class="wzm">
+              <a target="_blank"
+                href="https://mp.weixin.qq.com/s?__biz=MzU4OTYzNjE2OQ==&mid=2247486653&idx=1&sn=92128455c20ada46b355f5166ba5d4b5&chksm=fdcb3b9bcabcb28de6cb8f5c08a557f5078aede86b21fc151babc29dde8451d0a3a60efd0a51&scene=21#wechat_redirect"
+                class="span_a" style="">刷爆全网的动态条形图，原来5行Python代码就能实现！</a>
+              <em style="font-size: 12px">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+            </div>
+            <div class="wz2m">
+              比如数可视的「花火hanabi」，嫡数的「镝数图表」，以及国外网站「Flourish」
+            </div>
+          </div>
+          <div class="content" style="height: 32px">
+            <div class="wzm">
+              <a target="_blank" href="https://mp.weixin.qq.com/s/C_9vJS7o7ChpnUE-Wn6yMA" class="span_a"
+                style="">selenium爬取京东笔记本电脑信息</a>
+              <em style="font-size: 12px">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+            </div>
+            <div class="wz2m">
+              使用selenium爬取网页，破解登录，并自动化获取网页信息
+            </div>
+          </div>
+          <div class="content" style="height: 32px">
+            <div class="wzm">
+              <a target="_blank" href="https://mp.weixin.qq.com/s/NuxGEE3CylSRGCbjRe4NHA" class="span_a"
+                style="">求你了，别再用 pip 那乌龟的速度去安装库了</a>
+              <em style="font-size: 12px">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+            </div>
+            <div class="wz2m">
+              pip提速方法主要有两种，一种是临时提速，一种是永久提速
+            </div>
+          </div>
+          <div class="content" style="height: 32px">
+            <div class="wzm">
+              <a target="_blank" href="https://mp.weixin.qq.com/s/W_3e1SjUhAFnv1N54EUlzw" class="span_a"
+                style="">年轻人不讲武德，竟用Python让马老师表演闪电五连鞭</a>
+              <em style="font-size: 12px">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+            </div>
+            <div class="wz2m">
+              用Python给马保国老师做一个闪电五连鞭动态词云图
+            </div>
+          </div>
+          <div class="content" style="height: 32px">
+            <div class="wzm">
+              <a target="_blank" href="https://mp.weixin.qq.com/s/l6sPZAdoVVmqkI3JDJm7NA" class="span_a"
+                style="">让数据"动"起来：Python动态图表制作</a>
+              <em style="font-size: 12px">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+            </div>
+            <div class="wz2m">FuncAnimation，可以让我们的静态图表动起来</div>
+          </div>
+          <div class="content" style="height: 32px">
+            <div class="wzm">
+              <a target="_blank" href="https://mp.weixin.qq.com/s/u5ZB0l7cZmHYZHOa1nyCmQ" class="span_a" style="">教你使用 3
+                行 Python 代码获取海量数据</a>
+              <em style="font-size: 12px">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+            </div>
+            <div class="wz2m">
+              <a target="_blank" href="https://github.com/justinzm/gopup" class="span_a">GitHub地址</a>
+              <a target="_blank" href="http://doc.gopup.cn/#/README" class="span_a">使用文档地址</a>
+            </div>
+          </div>
+          <div class="content" style="height: 32px">
+            <div class="wzm">
+              <a target="_blank" href="https://mp.weixin.qq.com/s/HI1Sr9MEP_LTqDWsWcpkSw" class="span_a" style="">教你如何用
+                Python 三行代码做动图</a>
+              <em style="font-size: 12px">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+            </div>
+            <div class="wz2m">
+              <a target="_blank" href="https://github.com/JackMcKew/pandas_alive" class="span_a">GitHub地址</a>
+              <a target="_blank" href="https://jackmckew.github.io/pandas_alive/" class="span_a">使用文档地址</a>
+            </div>
+          </div>
+          <div class="content" style="height: 32px">
+            <div class="wzm">
+              <a target="_blank" href="https://mp.weixin.qq.com/s/UYCHjqg52YOIVGzKaiwdXw" class="span_a"
+                style="">赛博朋克这么火，如果与Python结合，能有多酷</a>
+              <em style="font-size: 12px">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+            </div>
+            <div class="wz2m">"赛博朋克"风格的Python库，「mplcyberpunk」</div>
+          </div>
+          <div class="content" style="height: 32px">
+            <div class="wzm">
+              <a target="_blank" href="https://mp.weixin.qq.com/s/TUSH1yS7Zs5q7CH5ItzyyA" class="span_a"
+                style="">用Python自动生成Excel数据报表</a>
+              <em style="font-size: 12px">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+            </div>
+            <div class="wz2m">实战一波，使用Python自动化生成数据报表</div>
+          </div>
+          <div class="content" style="height: 32px">
+            <div class="wzm">
+              <a target="_blank" href="https://mp.weixin.qq.com/s/cTm-MfMf6hfDWAINhpe2xA" class="span_a"
+                style="">这15个顶级Python库，你必须要知道</a>
+              <em style="font-size: 12px">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+            </div>
+            <div class="wz2m">
+              挑选了15个最有用的软件包，介绍它们的功能和特点
+            </div>
+          </div>
+          <div class="content" style="height: 32px">
+            <div class="wzm">
+              <a target="_blank" href="" class="span_a" style=""></a>
+              <em style="font-size: 12px">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+            </div>
+            <div class="wz2m"></div>
+          </div>
+          <div class="content" style="height: 32px">
+            <div class="wzm">
+              <a target="_blank" href="" class="span_a" style=""></a>
+              <em style="font-size: 12px">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+            </div>
+            <div class="wz2m"></div>
+          </div>
+          <div class="content" style="height: 32px">
+            <div class="wzm">
+              <a target="_blank" href="" class="span_a" style=""></a>
+              <em style="font-size: 12px">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+            </div>
+            <div class="wz2m"></div>
+          </div>
+          <div class="content" style="height: 32px">
+            <div class="wzm">
+              <a target="_blank" href="" class="span_a" style=""></a>
+              <em style="font-size: 12px">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+            </div>
+            <div class="wz2m"></div>
+          </div>
+        </div>
+      </section>
+      <section class="section_f">
+        <div style="width: 100%; height: 10px"></div>
+        <h3>
+          高效生活<span style="font-size: 12px; color: gray; padding-left: 30px">Here will provide you with some practical tips, websites and resources.</span>
+        </h3>
+        <div style="padding-left: 30px; padding-top: 10px">
+          <div class="content" style="color: #009999">
+            <div class="wz_n wzm" style="font-size: 14px">文章标题</div>
+            <div class="wz_n wz2m" style="font-size: 14px">文章介绍</div>
+          </div>
+          <div class="content" style="height: 32px">
+          <div class="wzm">
+            <a target="_blank" href="https://baijiahao.baidu.com/s?id=1673336636238375251&wfr=spider&for=pc" class="span_a"
+              style="">8个免费在线抠图网站 不会PS的小白也能一键抠出专业效果图</a>
+            <em style="font-size: 12px">&nbsp;&nbsp;&nbsp;&nbsp;</em>
+          </div>
+          <div class="wz2m">
+            分享10个免费在线的抠图网站——百度
+          </div>
+        </div>
+          
+        </div>
+      </section>
+      <section class="section_f">
+        <div style="width: 100%; height: 10px"></div>
+        <h3>
+          实用<span style="font-size: 12px; color: gray; padding-left: 30px">Farnast, you are a close friend of mine who
+            studies Python. Is
+            that acceptable to you.</span>
+        </h3>
+        <div style="padding-left: 30px; padding-top: 10px"></div>
+      </section>
+      <div class="d_click" style="cursor: pointer; margin-bottom: -705px; margin-left: 100px" id="d4">
+        <span class="s_click" onclick="setTab4(0)" style="">1</span>
+        <span onclick="setTab4(1)">2</span>
+        <span onclick="setTab4(2)">3</span>
+        <span onclick="setTab4(3)">4</span>
+        <span onclick="setTab4(4)">5</span>
+        <span onclick="setTab4(5)">...</span>
+      </div>
+      <script>
+        //暂时只能实现分页，但是不能实现左右切换的功能
+        function setTab4(n) {
+          //
+          var tli = document
+            .getElementById("d4")
+            .getElementsByTagName("span"); //控制标题的显示与遮盖
+          var mli = document
+            .getElementById("cut4")
+            .getElementsByTagName("section"); //控制标题时，对应内容的显示与遮盖
+          for (i = 0; i < tli.length; i++) {
+            tli[i].className = i == n ? "s_click" : "";
+            mli[i].style.display = i == n ? "block" : "none";
+          }
+        }
+      </script>
+    </div>
+    <!-- content3 -->
+    <div class="show text content3" id="cut1">
+      <!--  -->
+      <section class="section_f block">
+        <div style="width: 100%; height: 10px"></div>
+        <h3>
+          优质公众号 one<span style="font-size: 12px; color: gray; padding-left: 30px">Sometimes I have no direction and
+            power to write, but I still
+            have to insist, because I can't give up.</span>
+        </h3>
+        <!-- <div class="content" style="color: #009999;">
+                                        <div class="wzm_n wzm" style="font-size: 14px;">项目地址</div>
+                                        <div class="wzm_n wz2m" style="font-size: 14px;">项目介绍</div>
+                                    </div> -->
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="footer">
+          <!-- <marquee behavior="" direction="" style="margin-left: 470px;width: auto;"><span
+              style="font-size: 12px;"></span></marquee> -->
+        </div>
+      </section>
+      <section class="section_f">
+        <div style="width: 100%; height: 10px"></div>
+        <h3>
+          优质公众号 two<span style="font-size: 12px; color: gray; padding-left: 30px">Sometimes I have no direction and
+            power to write, but I still
+            have to insist, because I can't give up.</span>
+        </h3>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="footer">
+          <!-- <marquee behavior="" direction="" style="margin-left: 470px;width: auto;"><span
+              style="font-size: 12px;"></span></marquee> -->
+        </div>
+      </section>
+      <section class="section_f">
+        <div style="width: 100%; height: 10px"></div>
+        <h3>
+          优质公众号 three<span style="font-size: 12px; color: gray; padding-left: 30px">Sometimes I have no direction and
+            power to write, but I still
+            have to insist, because I can't give up.</span>
+        </h3>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="footer">
+          <!-- <marquee behavior="" direction="" style="margin-left: 470px;width: auto;"><span
+              style="font-size: 12px;"></span></marquee> -->
+        </div>
+      </section>
+      <section class="section_f">
+        <div style="width: 100%; height: 10px"></div>
+        <h3>
+          优质公众号 four<span style="font-size: 12px; color: gray; padding-left: 30px">Sometimes I have no direction and
+            power to write, but I still
+            have to insist, because I can't give up.</span>
+        </h3>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="footer">
+          <!-- <marquee behavior="" direction="" style="margin-left: 470px;width: auto;"><span
+              style="font-size: 12px;"></span></marquee> -->
+        </div>
+      </section>
+      <section class="section_f">
+        <div style="width: 100%; height: 10px"></div>
+        <h3>
+          优质公众号 five<span style="font-size: 12px; color: gray; padding-left: 30px">Sometimes I have no direction and
+            power to write, but I still
+            have to insist, because I can't give up.</span>
+        </h3>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="footer">
+          <!-- <marquee behavior="" direction="" style="margin-left: 470px;width: auto;"><span
+              style="font-size: 12px;"></span></marquee> -->
+        </div>
+      </section>
+      <!-- 这里有问题 -->
+      <div class="d_click" style="cursor: pointer; margin-bottom: -1435px; margin-left: 100px" id="d1">
+        <span class="s_click" onclick="setTab1(0)" style="">1</span>
+        <span onclick="setTab1(1)">2</span>
+        <span onclick="setTab1(2)">3</span>
+        <span onclick="setTab1(3)">4</span>
+        <span onclick="setTab1(4)">5</span>
+        <span onclick="setTab1(5)">...</span>
+      </div>
+      <script>
+        //暂时只能实现分页，但是不能实现左右切换的功能
+        function setTab1(n) {
+          //
+          var tli = document
+            .getElementById("d1")
+            .getElementsByTagName("span"); //控制标题的显示与遮盖
+          var mli = document
+            .getElementById("cut1")
+            .getElementsByTagName("section"); //控制标题时，对应内容的显示与遮盖
+          for (i = 0; i < tli.length; i++) {
+            tli[i].className = i == n ? "s_click" : "";
+            mli[i].style.display = i == n ? "block" : "none";
+          }
+        }
+      </script>
+    </div>
+    <!-- content4 -->
+    <div class="text content4">未开发</div>
+    <!-- content5 -->
+    <div class="show text content5" id="cut2">
+      <!-- PDF-编程、时事 -->
+      <section class="section_f block">
+        <div style="width: 100%; height: 10px"></div>
+        <h3>
+          PDF-编程、时事<span style="font-size: 12px; color: gray; padding-left: 30px">The main presentation here is a PDF document on programming and current affair.</span>
+        </h3>
+        <div class="menulist1 menulist_1">
+          <a href="pdf/Web前端开发技术实验与实践  HTML、CSS、JavaScript.pdf" one-link-mark="yes" target="_blank">
+            <h4>Web前端开发技术实验与实践</h4>
+            <p>
+              Web前端实践教程<br />
+              <i class="i">HTML、CSS、JavaScript</i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="pdf/Java Web程序开发入门.pdf" one-link-mark="yes" target="_blank">
+            <h4>Java Web程序开发入门</h4>
+            <p>
+              Web前端+Jsp及Java技术
+              <br />
+              <i class="i">Java、Web、Jsp</i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="pdf/Java程序设计基础-实验教学大纲.pdf" one-link-mark="yes" target="_blank">
+            <h4>Java程序设计基础</h4>
+            <p>
+              实验教学大纲
+              <br />
+              <i class="i">Java</i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="pdf/电子商务技术基础.pdf" one-link-mark="yes" target="_blank">
+            <h4>电子商务技术基础</h4>
+            <p>
+              利用JSP进行电子商务技术基础开发
+              <br />
+              <i class="i">JSP、Java</i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="pdf/半导体行业深度专题之八：详解华为芯片供应链，半导体产业机遇挑战并存.pdf" one-link-mark="yes" target="_blank">
+            <h4>半导体行业深度专题</h4>
+            <p>
+              详解华为芯片供应链，半导体产业机遇挑战并存
+              <i class="i" style="margin-top: -18px;">华为、芯片</i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="pdf/华为这一年：产业链的挑战与机遇-中信建投.pdf" one-link-mark="yes" target="_blank">
+            <h4>华为2020年报告</h4>
+            <p>
+              华为这一年：产业链的挑战与机遇-中信建投
+              <br />
+              <i class="i" style="margin-top: -18px;">华为</i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="pdf/西南证券-全球科技行业专题报告-华为：无边界扩张的科技巨头.pdf" one-link-mark="yes" target="_blank">
+            <h4>西南证券-全球科技行业专题报告</h4>
+            <p>
+              华为：无边界扩张的科技巨头
+              <br />
+              <i class="i">华为</i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="pdf/中信证券：华为：世界级科技巨头，迎接机遇与挑战.pdf" one-link-mark="yes" target="_blank">
+            <h4>中信证券：华为</h4>
+            <p>世界级科技巨头，迎接机遇与挑战
+              <br />
+              <i class="i">华为</i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="pdf/工业互联网平台赋能重点行业数字化转型方法论-赛迪研究院.pdf" one-link-mark="yes" target="_blank">
+            <h4>赛迪研究院</h4>
+            <p>工业互联网平台赋能重点行业数字化转型方法论
+              <br />
+              <i class="i" style="margin-top: -18px;">智能工业</i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="pdf/中国移动研究院：5G典型应用案例集锦.pdf" one-link-mark="yes" target="_blank">
+            <h4>中国移动研究院</h4>
+            <p>5G典型应用案例集锦
+              <br />
+              <i class="i">5G</i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="pdf/美国对华法案.pdf" one-link-mark="yes" target="_blank">
+            <h4>美国对华法案</h4>
+            <p>美国对华法案
+              <br />
+              <i class="i">中美贸易战</i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="pdf/数据透视表终极版.pdf" one-link-mark="yes" target="_blank">
+            <h4>数据透视表</h4>
+            <p>Excel数据透视表终极版
+              <br />
+              <i class="i">数据透视表</i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="footer">
+          <!-- <marquee behavior="" direction="" style="margin-left: 470px;width: auto;"><span
+              style="font-size: 12px;"></span></marquee> -->
+        </div>
+      </section>
+      <!-- PDF-教资、教学、作品 -->
+      <section class="section_f">
+        <div style="width: 100%; height: 10px"></div>
+        <h3>
+          PDF-教资、教学、作品<span style="font-size: 12px; color: gray; padding-left: 30px">Here are mainly PDF documents about teaching resources,teaching and composition.</span>
+        </h3>
+        <div class="menulist1 menulist_1">
+          <a href="pdf/jz1.pdf" one-link-mark="yes" target="_blank">
+            <h4>教师资格考试</h4>
+            <p>
+              2012年下半年《教育教学知识与能力（中学）》真题<br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="pdf/jz2.pdf" one-link-mark="yes" target="_blank">
+            <h4>教师资格考试</h4>
+            <p>
+              2013年上半年《教育教学知识与能力（中学）》真题
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="pdf/jz3.pdf" one-link-mark="yes" target="_blank">
+            <h4>教师资格考试</h4>
+            <p>
+              2013年下半年《教育教学知识与能力（中学）》真题
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="pdf/jz4.pdf" one-link-mark="yes" target="_blank">
+            <h4>教师资格考试</h4>
+            <p>
+              2014年上半年《教育教学知识与能力（中学）》真题
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="pdf/jz5.pdf" one-link-mark="yes" target="_blank">
+            <h4>教师资格考试</h4>
+            <p>
+              2014年下半年《教育教学知识与能力（中学）》真题
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="pdf/jz6.pdf" one-link-mark="yes" target="_blank">
+            <h4>教师资格考试</h4>
+            <p>
+              2015年上半年《教育教学知识与能力（中学）》真题
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="pdf/jz7.pdf" one-link-mark="yes" target="_blank">
+            <h4>教师资格考试</h4>
+            <p>
+              2015年下半年《教育教学知识与能力（中学）》真题
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="pdf/市场调查与预测教材.pdf" one-link-mark="yes" target="_blank">
+            <h4>电子书教案</h4>
+            <p>市场调查与预测教材
+              <br />
+              <i class="i">市场调查与预测</i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="pdf/网络经济学.pdf" one-link-mark="yes" target="_blank">
+            <h4>电子书教案</h4>
+            <p>网络经济学
+              <br />
+              <i class="i">网络经济学</i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="pdf/英语chapter 2.pdf" one-link-mark="yes" target="_blank">
+            <h4>英语电子版</h4>
+            <p>英语chapter 2
+              <br />
+              <i class="i">English</i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="pdf/消费心理学.pdf" one-link-mark="yes" target="_blank">
+            <h4>消费心理学</h4>
+            <p>消费心理学ppt作业
+              <br />
+              <i class="i">消费心理学</i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="pdf/企业文化-学长学姐PPT作品.pdf" one-link-mark="yes" target="_blank">
+            <h4>企业文化PPT</h4>
+            <p>学长学姐PPT作品
+              <br />
+              <i class="i">PPT动画</i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="pdf/英语口语文稿.pdf" one-link-mark="yes" target="_blank">
+            <h4>英语口语文稿</h4>
+            <p>英语口语文稿
+              <br />
+              <i class="i">英语口语文稿</i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="pdf/市场调查报告.pdf" one-link-mark="yes" target="_blank">
+            <h4>市场调查报告</h4>
+            <p>市场调查报告
+              <br />
+              <i class="i">问卷星-问卷调查</i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="pdf/华为GMS安装详情.pdf" one-link-mark="yes" target="_blank">
+            <h4>GMS</h4>
+            <p>华为GMS安装详情
+              <br />
+              <i class="i">手机访问谷歌服务</i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="pdf/电子商务创业项目策划书－供参考.pdf" one-link-mark="yes" target="_blank">
+            <h4>电子商务创业项目策划书</h4>
+            <p>电子商务创业项目策划书模板
+              <br />
+              <i class="i">nice 推荐</i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="pdf/简历.pdf" one-link-mark="yes" target="_blank">
+            <h4>我的简历</h4>
+            <p>我的简历模板
+              <br />
+              <i class="i">需完善</i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="footer">
+          <!-- <marquee behavior="" direction="" style="margin-left: 470px;width: auto;"><span
+              style="font-size: 12px;"></span></marquee> -->
+        </div>
+      </section>
+      <section class="section_f">
+        <div style="width: 100%; height: 10px"></div>
+        <h3>
+          优质公众号 three<span style="font-size: 12px; color: gray; padding-left: 30px">Sometimes I have no direction and
+            power to write, but I still
+            have to insist, because I can't give up.</span>
+        </h3>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="footer">
+          <!-- <marquee behavior="" direction="" style="margin-left: 470px;width: auto;"><span
+              style="font-size: 12px;"></span></marquee> -->
+        </div>
+      </section>
+      <section class="section_f">
+        <div style="width: 100%; height: 10px"></div>
+        <h3>
+          优质公众号 four<span style="font-size: 12px; color: gray; padding-left: 30px">Sometimes I have no direction and
+            power to write, but I still
+            have to insist, because I can't give up.</span>
+        </h3>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="footer">
+          <!-- <marquee behavior="" direction="" style="margin-left: 470px;width: auto;"><span
+              style="font-size: 12px;"></span></marquee> -->
+        </div>
+      </section>
+      <section class="section_f">
+        <div style="width: 100%; height: 10px"></div>
+        <h3>
+          优质公众号 five<span style="font-size: 12px; color: gray; padding-left: 30px">Sometimes I have no direction and
+            power to write, but I still
+            have to insist, because I can't give up.</span>
+        </h3>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="footer">
+          <!-- <marquee behavior="" direction="" style="margin-left: 470px;width: auto;"><span
+              style="font-size: 12px;"></span></marquee> -->
+        </div>
+      </section>
+      <div class="d_click" style="cursor: pointer; margin-bottom: -2895px; margin-left: 100px" id="d2">
+        <span class="s_click" onclick="setTab2(0)" style="">1</span>
+        <span onclick="setTab2(1)">2</span>
+        <span onclick="setTab2(2)">3</span>
+        <span onclick="setTab2(3)">4</span>
+        <span onclick="setTab2(4)">5</span>
+        <span onclick="setTab2(5)">...</span>
+      </div>
+      <script>
+        //暂时只能实现分页，但是不能实现左右切换的功能
+        function setTab2(n) {
+          //
+          var tli = document
+            .getElementById("d2")
+            .getElementsByTagName("span"); //控制标题的显示与遮盖
+          var mli = document
+            .getElementById("cut2")
+            .getElementsByTagName("section"); //控制标题时，对应内容的显示与遮盖
+          for (i = 0; i < tli.length; i++) {
+            tli[i].className = i == n ? "s_click" : "";
+            mli[i].style.display = i == n ? "block" : "none";
+          }
+        }
+      </script>
+    </div>
+    <div class="show text content6" id="cut3">
+      <!-- content6 -->
+      <section class="section_f block">
+        <div style="width: 100%; height: 10px"></div>
+        <h3>
+          优质公众号 one<span style="font-size: 12px; color: gray; padding-left: 30px">Sometimes I have no direction and
+            power to write, but I still
+            have to insist, because I can't give up.</span>
+        </h3>
+        <!-- <div class="content" style="color: #009999;">
+                                        <div class="wzm_n wzm" style="font-size: 14px;">项目地址</div>
+                                        <div class="wzm_n wz2m" style="font-size: 14px;">项目介绍</div>
+                                    </div> -->
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="footer">
+          <!-- <marquee behavior="" direction="" style="margin-left: 470px;width: auto;"><span
+              style="font-size: 12px;"></span></marquee> -->
+        </div>
+      </section>
+      <section class="section_f">
+        <div style="width: 100%; height: 10px"></div>
+        <h3>
+          优质公众号 two<span style="font-size: 12px; color: gray; padding-left: 30px">Sometimes I have no direction and
+            power to write, but I still
+            have to insist, because I can't give up.</span>
+        </h3>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="footer">
+          <!-- <marquee behavior="" direction="" style="margin-left: 470px;width: auto;"><span
+              style="font-size: 12px;"></span></marquee> -->
+        </div>
+      </section>
+      <section class="section_f">
+        <div style="width: 100%; height: 10px"></div>
+        <h3>
+          优质公众号 three<span style="font-size: 12px; color: gray; padding-left: 30px">Sometimes I have no direction and
+            power to write, but I still
+            have to insist, because I can't give up.</span>
+        </h3>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="footer">
+          <!-- <marquee behavior="" direction="" style="margin-left: 470px;width: auto;"><span
+              style="font-size: 12px;"></span></marquee> -->
+        </div>
+      </section>
+      <section class="section_f">
+        <div style="width: 100%; height: 10px"></div>
+        <h3>
+          优质公众号 four<span style="font-size: 12px; color: gray; padding-left: 30px">Sometimes I have no direction and
+            power to write, but I still
+            have to insist, because I can't give up.</span>
+        </h3>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="footer">
+          <!-- <marquee behavior="" direction="" style="margin-left: 470px;width: auto;"><span
+              style="font-size: 12px;"></span></marquee> -->
+        </div>
+      </section>
+      <section class="section_f">
+        <div style="width: 100%; height: 10px"></div>
+        <h3>
+          优质公众号 five<span style="font-size: 12px; color: gray; padding-left: 30px">Sometimes I have no direction and
+            power to write, but I still
+            have to insist, because I can't give up.</span>
+        </h3>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="menulist1 menulist_1">
+          <a href="" one-link-mark="yes" target="_blank">
+            <h4></h4>
+            <p>
+              <br />
+              <i class="i"></i>
+            </p>
+          </a>
+        </div>
+        <div class="footer">
+          <!-- <marquee behavior="" direction="" style="margin-left: 470px;width: auto;"><span
+              style="font-size: 12px;"></span></marquee> -->
+        </div>
+      </section>
+      <div class="d_click" style="cursor: pointer; margin-bottom: -3625px; margin-left: 100px" id="d3">
+        <span class="s_click" onclick="setTab3(0)" style="">1</span>
+        <span onclick="setTab3(1)">2</span>
+        <span onclick="setTab3(2)">3</span>
+        <span onclick="setTab3(3)">4</span>
+        <span onclick="setTab3(4)">5</span>
+        <span onclick="setTab3(5)">...</span>
+      </div>
+      <script>
+        //暂时只能实现分页，但是不能实现左右切换的功能
+        function setTab3(n) {
+          //
+          var tli = document
+            .getElementById("d3")
+            .getElementsByTagName("span"); //控制标题的显示与遮盖
+          var mli = document
+            .getElementById("cut3")
+            .getElementsByTagName("section"); //控制标题时，对应内容的显示与遮盖
+          for (i = 0; i < tli.length; i++) {
+            tli[i].className = i == n ? "s_click" : "";
+            mli[i].style.display = i == n ? "block" : "none";
+          }
+        }
+      </script>
+    </div>
+    <!-- right -->
+    <div class="div_r">
+      <!-- 我的音频与2D看板娘 -->
+      <section class="section_r">
+        <h2 style="padding-top: 50px; padding-left: 40px">
+          <label for="file" class="" style="cursor: pointer">请选择一首本地音频文件</label>
+        </h2>
+        <div id="content">
+          <!-- <span id="file_block">选择文件</span> -->
+          <input type="file" id="file" accept="audio/*" />
+          <canvas id="canvas"></canvas>
+          <audio id="audio" controls></audio>
+        </div>
+        <span><a href="http://music.zhuolin.wang/" target="_blank" class="gdyj">更多音乐>>></a></span>
+      </section>
+    </div>
+  </div>
+  <script src="https://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+  <script src="https://www.jq22.com/demo/jqueryMenu202012160007/js/index.js"></script>
+  <!-- 音频可视化 -->
+  <script type="text/javascript">
+    window.onload = function () {
+      var file = document.getElementById("file");
+      var audio = document.getElementById("audio");
+
+      file.onchange = function () {
+        //part1: 画布
+        var canvas = document.getElementById("canvas");
+        var context = canvas.getContext("2d");
+
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        var WIDTH = canvas.width;
+        var HEIGHT = canvas.height;
+
+        //part2: 音频
+        var files = this.files; //声音文件
+        audio.src = URL.createObjectURL(files[0]);
+        audio.load();
+
+        //part3: 分析器
+        var AudCtx = new AudioContext(); //音频内容
+        var src = AudCtx.createMediaElementSource(audio);
+        var analyser = AudCtx.createAnalyser();
+
+        src.connect(analyser);
+        analyser.connect(AudCtx.destination);
+        analyser.fftSize = 128; //快速傅里叶变换, 必须为2的N次方
+
+        var bufferLength = analyser.frequencyBinCount; // = fftSize * 0.5
+
+        //part4: 变量
+        var barWidth = WIDTH / bufferLength - 1; //间隔1px
+        var barHeight;
+
+        var dataArray = new Uint8Array(bufferLength); //8位无符号定长数组
+
+        //part5: 动态监听
+        function renderFrame() {
+          requestAnimationFrame(renderFrame); //方法renderFrame托管到定时器，无限循环调度，频率<16.6ms/次
+
+          context.fillStyle = "#29324e"; //黑色背景
+          context.fillRect(0, 0, WIDTH, HEIGHT); //画布拓展全屏,动态调整
+
+          analyser.getByteFrequencyData(dataArray); //获取当前时刻的音频数据
+
+          //part6: 绘画声压条
+          var x = 0;
+          for (var i = 0; i < bufferLength; i++) {
+            var data = dataArray[i]; //int,0~255
+
+            var percentV = data / 255; //纵向比例
+            var percentH = i / bufferLength; //横向比例
+
+            barHeight = HEIGHT * percentV;
+
+            //gbk,0~255
+            var r = 255 * percentV; //值越大越红
+            var g = 255 * percentH; //越靠右越绿
+            var b = 50;
+
+            context.fillStyle = "rgb(" + r + "," + g + "," + b + ")";
+            context.fillRect(x, HEIGHT - barHeight, barWidth, barHeight);
+
+            x += barWidth + 1; //间隔1px
+          }
+        }
+
+        renderFrame();
+
+        //part7: 播放声音
+        audio.play();
+      };
+    };
+  </script>
+  <script>
+    var div = document.getElementById("mytime");
+    getDate();
+    setInterval(getDate, 1000);
+
+    function getDate() {
+      var date = new Date();
+      var year = date.getFullYear();
+      var month = date.getMonth() + 1;
+      month = month < 10 ? "0" + month : month;
+      var dates = date.getDate();
+      dates = dates < 10 ? "0" + dates : dates;
+      var arr = [
+        "星期日",
+        "星期一",
+        "星期二",
+        "星期三",
+        "星期四",
+        "星期五",
+        "星期六",
+      ];
+      var day = date.getDay();
+      var hour = date.getHours();
+      // var half = hour >= 12 ? '下午' : '上午';
+      // hour = hour <= 12 ? hour : (hour - 12);
+      // hour = hour < 10 ? '0' + hour : hour;
+      var min = date.getMinutes();
+      min = min < 10 ? "0" + min : min;
+      var sed = date.getSeconds();
+      sed = sed < 10 ? "0" + sed : sed;
+      div.innerHTML =
+        "今天是" +
+        year +
+        "年" +
+        month +
+        "月" +
+        dates +
+        "日 " +
+        arr[day] +
+        " " +
+        "<br/>" +
+        hour +
+        "点" +
+        min +
+        "分" +
+        sed +
+        "秒"; //+ half
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,319 @@
+.left_nav {
+  width: 90px;
+  float: left;
+  /* background-color: red; */
+  height: 500px;
+  /* margin-top: 30px; */
+  position: fixed;
+  border: 0px #f8f8f8 solid;
+  border-right: 2px solid #f8f8f8;
+  overflow: hidden;
+  /* z-index: 99; */
+}
+ul,li {
+  list-style: none;
+}
+.left_nav .nav-pills {
+  position: fixed;
+  width: 80px;
+  height: 100%;
+}
+.nav-pills ul {
+  position: fixed;
+  text-align: center;
+  width: 80px;
+  height: 100%;
+  /* overflow: hidden; */
+  padding: 0;
+  margin: 0;
+  background: #fff;
+  z-index: 0;
+  padding: 30px 10px 0 0;
+}
+
+.nav-pills ul li {
+  width: 90px;
+  height: 50px;
+  line-height: 50px;
+  /* background: white; */
+  text-align: center;
+  font-size: 13px;
+  border-bottom: 1px solid #f8f8f8;
+}
+
+.nav-pills ul li a {
+  color: #666;
+  display: block;
+}
+.nav-pills ul li:hover {
+  background: #f8f8f8;
+  border-left: 2px solid #ff5f3e;
+ }
+.nav-pills ul li a:hover {
+  color: #ff5f3e;
+  /*background-color: #f8f8f8;
+  */
+  text-decoration: none;
+ 
+}
+
+.nav-pills ul li a.hover {
+  color: #ff5f3e;
+}
+#lanPos {
+  /* width: 90px;
+  height: 50px;
+  line-height: 50px;
+  background: #f8f8f8;
+  border-left: 2px solid #ff5f3e;
+  position: fixed; */
+  /* left: -3px; */
+  /* top: 0;
+  z-index: -1;
+  transition: top 0.2s;
+  -webkit-transition: top 0.2s;
+  -moz-transition: top 0.2s;
+  -ms-transition: top 0.2s;
+  -o-transition: top 0.2s; */
+}
+/*header*/
+.ax-space-header {
+  height: calc(30px + 10px);
+  overflow: hidden;
+}
+.ax-break,
+.ax-break-md {
+  height: 14px;
+  overflow: hidden;
+}
+/*scrollnav*/
+.ax-scrollnav-v {
+  font-size: 12px;
+  background-color: rgba(255, 255, 255, 0.1);
+  /* padding: 14px; */
+  line-height: 50px;
+  position: fixed;
+  /* padding-left:-10px;  */
+  /* top: 60px; */
+  /* right: 14px; */
+  z-index: 1;
+  padding: 0;
+  width: 115px;
+  height: 100%;
+  display: block;
+}
+#Catalog_box {
+  font-size: 12px;
+  background-color: rgba(255, 255, 255, 0.1);
+  line-height: 50px;
+  position: fixed;
+  z-index: 1;
+  padding: 0;
+  width: 90px;
+  height: 100%;
+  top: 30px;
+}
+#Catalog_box dd {
+  width: 85px;
+  height: 40px;
+  display: block;
+  text-align: center;
+  line-height: 40px;
+  border-bottom: 1px solid #f8f8f8;
+}
+#Catalog_box dd a {
+  width: 85px;
+  height: 40px;
+  display: block;
+  color: #666;
+  text-align: center;
+  line-height: 40px;
+  border-bottom: 1px solid #f8f8f8;
+}
+#Catalog_box dd a:hover {
+  color: #ff5f3e;
+  border-left: 2px solid #ff5f3e;
+  background-color: #f8f8f8;
+}
+
+#Catalog_box dd.active,#Catalog_box dd.active a {color:#ff5f3e!important;}
+.ax-scrollnav-v .ax-close {
+  color: #198cff;
+  width: 80px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  border-radius: 38px;
+  border: 1px solid #ebebeb;
+  box-sizing: border-box;
+  position: absolute;
+  right: 0;
+  bottom: calc(-50px - 14px);
+}
+.ax-scrollnav-v.ax-hide {
+  right: -100%;
+}
+.ax-scrollnav-v.ax-hide .ax-close {
+  color: #fff;
+  text-align: right;
+  width: 85px;
+  height: 40px;
+  border-radius: 50px;
+  line-height: 50px;
+  border-width: 0;
+  background-color: #198cff;
+  padding: 0 4px;
+  transform: translate(50%, -50%) rotate(180deg);
+  position: fixed;
+  right: 0;
+  top: 50%;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+}
+.ax-scrollnav-v li {
+  position: relative;
+  padding-left: 5px;
+  white-space: nowrap;
+  border-left: 1px solid #f0f0f0;
+  text-align: center;
+  width: 85px;
+  height: 40px;
+  line-height: 40px;
+  border-bottom: 1px solid #f8f8f8;
+}
+.ax-scrollnav-v li a {
+  width: 85px;
+  height: 40px;
+  color: #666;
+  display: block;
+  text-align: center;
+  line-height: 40px;
+}
+
+.ax-scrollnav-v li.ax-active > a {
+  color: #ff5f3e;
+  background-color: #f8f8f8;
+}
+.ax-scrollnav-v li:before {
+  content: '';
+  height: 40px;
+  width: 2px;
+  position: absolute;
+  left: -1px;
+  top: 0;
+}
+.ax-scrollnav-v li.ax-active:before {
+  background-color: #ff5f3e;
+}
+.ax-scrollnav-h {
+  background-color: #fff;
+  line-height: 38px;
+  text-align: center;
+  position: relative;
+  z-index: 4;
+}
+.ax-scrollnav-h li {
+  margin: 0 14px;
+  white-space: nowrap;
+  display: inline-block;
+  position: relative;
+}
+.ax-scrollnav-h li.ax-active > a {
+  color: #198cff;
+}
+.ax-scrollnav-h li:before {
+  content: '';
+  height: 2px;
+  width: 100%;
+  transition: all 0.2s linear;
+  position: absolute;
+  bottom: 0;
+}
+.ax-scrollnav-h li.ax-active:before {
+  background-color: #198cff;
+}
+/*complete*/
+.ax-complete [hidden] {
+  display: none;
+}
+.ax-form-input .ax-complete {
+  display: block;
+}
+.ax-complete .ax-text {
+  color: #b3b3b3;
+}
+.ax-complete {
+  display: inline-block;
+  position: relative;
+}
+.ax-complete > input {
+  display: block;
+}
+.ax-complete > ul {
+  min-width: 100%;
+  box-sizing: border-box;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background: #fff;
+  border: 1px solid #ebebeb;
+  border-radius: 3px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  transition: 0.3s ease;
+  transform-origin: calc(14px*2) -28px;
+  position: absolute;
+  left: 0;
+  top: calc(100% + 7px);
+  z-index: 1;
+}
+.ax-complete > ul:empty {
+  display: none;
+}
+.ax-complete > ul[hidden],
+.ax-complete > ul:empty {
+  opacity: 0;
+  transform: scale(0);
+  display: block;
+}
+.ax-complete > ul:before {
+  content: "";
+  width: 0;
+  height: 0;
+  padding: 5px;
+  background: #fff;
+  border: inherit;
+  border-right: 0;
+  border-bottom: 0;
+  transform: rotate(45deg);
+  position: absolute;
+  top: -6px;
+  left: calc(14px*2);
+}
+.ax-complete > ul > li {
+  width: 100%;
+  padding: 5px 14px;
+  cursor: pointer;
+  box-sizing: border-box;
+  display: -moz-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: box;
+  position: relative;
+  zoom: 1;
+}
+.ax-complete > ul > li:hover {
+  background-color: #fafafa;
+  color: #198cff;
+}
+.ax-complete > ul > li[aria-selected="true"] {
+  background-color: #fafafa;
+  color: #198cff;
+}
+.ax-complete mark {
+  color: #dc3545;
+  font-weight: bold;
+  background: transparent;
+  text-decoration: underline;
+}

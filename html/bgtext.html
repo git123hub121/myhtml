@@ -1,0 +1,59 @@
+<!--
+ * @Author: 你爸爸lzm
+ * @Date: 2021-05-05 08:59:30
+ * @Notes: 使用built命令快速得到一些常用的snippets,右击py文件可以preview代码
+ * @LastEditTime: 2021-05-05 09:27:47
+-->
+
+
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+<meta charset="UTF-8">
+<title>用来写文章感想</title>
+
+<link rel="stylesheet" href="https://cdn.bootcss.com/tailwindcss/1.0.5/tailwind.min.css">
+<link rel='stylesheet' href='https://www.jq22.com/demo/jquerybgcolor201907151220/css/normalize.min.css'>
+<link rel="stylesheet" href="https://www.jq22.com/demo/jquerybgcolor201907151220/css/style.css">
+
+</head>
+
+<body>
+
+<div class="absolute bg-white left-0 p-4 right-0 text-grey">
+  <div class="flex items-center">
+    <div class="flex flex-wrap mr-8 items-center justify-between">
+      <h3 class="font-bold text-sm mr-3">默认主题</h3>
+      <div class="flex">
+		  <span class="cursor-pointer w-10 h-10 inline-block rounded-full mr-4" data-bg-color="#b84130" data-color="#ffffff" style="background-color: #b84130">&nbsp;</span>
+		  <span class="cursor-pointer w-10 h-10 inline-block rounded-full mr-4" data-bg-color="#363d98" data-color="#ffffff" style="background-color: #363d98">&nbsp;</span>
+		  <span class="cursor-pointer w-10 h-10 inline-block rounded-full" data-bg-color="#FFD5CD" data-color="#333333" style="background-color: #FFD5CD">&nbsp;</span>
+	  </div>
+    </div>
+    <h3 class="font-bold mr-4 text-sm">动态颜色</h3>
+    <div class="flex items-center">
+      <div class="flex items-center mr-3">
+        <label class="text-sm mr-2">背景：</label>
+        <input class="cursor-pointer h-10 outline-none rounded-full w-10 input-color-picker" type="color" data-id="bg-color" name="Background" />
+      </div>
+      <div class="flex items-center">
+        <label class="text-sm mr-2">Color:</label>
+        <input class="cursor-pointer h-10 outline-none rounded-full w-10 input-color-picker" type="color" data-id="color" name="Color" />
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="hero h-screen">
+  <!-- class="h-full flex justify-center items-center" -->
+  <div class="h-full flex justify-center items-center">
+    <!--  class="text-5xl font-bold" -->
+    <h1 class="text-5xl font-bold" style="cursor: pointer;">常常有人问我，你为什么喜欢这个，我只想说，我也不知道耶</h1>
+  </div>
+</section>
+
+<script src="https://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+<script src="https://www.jq22.com/demo/jquerybgcolor201907151220/js/script.js"></script>
+
+</body>
+</html>

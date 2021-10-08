@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>myhtml</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="css/templatemo-style.css">
+    <link rel="stylesheet" href="css/navleft.css">
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <!-- <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css"> -->
+    <script src="https://www.jq22.com/demo/jquery-daohuan-150101214822/js/jquery.min.js"></script>
+	<!-- <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script> -->
+	<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- <script src="https://luoyu6.github.io/xfc_master/js/jquery.js"></script> -->
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js"></script>
+    <script src="js/plugins.js"></script>
+    
+    <style>
+    </style>
+
+
+</head>
+
+<body data-spy="scroll" data-target="#myScrollspy" data-offset="20">
+   
+    <nav class="navbar navbar-expand-lg" style="width: 100%; height: 100%;">
+        <div class="container-fluid"
+            style="width: 100%; height: 60px;background-color: white;position: fixed;z-index: 999;margin: 0;text-align: center;padding-top: 20px;">
+            <!-- style="position: fixed;" -->
+            <a target="_blank" class="navbar-brand" href="#">
+                <i class="fas fa-film mr-2"></i>
+                My Favorites
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a target="_blank" class="nav-link nav-link-1 active" aria-current="page" href="index.html">Website</a>
+                    </li>
+                    <li class="nav-item">
+                        <a target="_blank" class="nav-link nav-link-2" href="videos.html">Gaming</a>
+                    </li>
+                    <li class="nav-item">
+                        <a target="_blank" class="nav-link nav-link-3" href="about.html">Resources</a>
+                    </li>
+                    <li class="nav-item">
+                        <a target="_blank" class="nav-link nav-link-4" href="contact.html">Contact</a>
+                    </li>
+                </ul> 
+            </div>
+        </div>
+    </nav>
+    <!-- style="width: 5%;float: left;background-color: red;height: 700px;margin-top: 30px;" -->
+    <div class="left_nav" >         
+                        <div class="nav-pills" style="float: none;">
+                        <ul> 
+                            <li>
+                                <a href="#" class="navItems hover" navTo="Knowledge">Knowledge</a></li>
+                            <li><a href="#" class="navItems" navTo="Program">Program</a></li>
+                            <li><a href="#" class="navItems" navTo="Resources">Resources</a></li>
+                            <li><a href="javascript:;" class="navItems" navTo="gts_content">GTS</a></li>
+                            <li><a href="javascript:;" class="navItems" navTo="vts_content">VTS</a></li>
+                            <li><a href="javascript:;" class="navItems" navTo="sts_content">STS</a></li>
+                            <div id="lanPos"></div>
+                        </ul>
+                    </div>
+                        
+                    </div>              
+    <!-- <script type="text/javascript">
+    $(function(){
+	// $('#lanPos').css('top',$('.hover').offset().top);
+		$('ul li').hover(function(){
+			$('#lanPos').css('top',$(this).offset().top);
+			},function(){
+				$('#lanPos').css('top',$('.hover').offset().top);
+				})
+		
+		// $('ul li').click(function(){
+		// 		for(var i=0;i<$('ul li').size();i++){
+		// 				if(this==$('ul li').get(i)){
+		// 					$('ul li').eq(i).children('a').addClass('hover');
+		// 					}else{
+		// 						$('ul li').eq(i).children('a').removeClass('hover');
+		// 						}
+		// 			}
+		// 	})
+				
+	})
+    </script> -->
+    
+    <main id="article01">
+    <div style="width: 94%;float: right;margin-top: 30px;">
+    <!-- Knowledge and Learning sites -->
+    <div class="container-fluid tm-container-content tm-mt-60 big">
+        <div class="row mb-4">
+            <h2 class="col-6 tm-text-primary" id="Knowledge">
+                Knowledge and Learning sites
+            </h2>
+        </div>
+        <div class="row tm-mb-90 tm-gallery">
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5 show">
+                <figure class="effect-ming tm-video-item">
+                    <img src="img/csdn.jpg" alt="Image" class="img-fluid">
+                    <figcaption class="d-flex align-items-center justify-content-center">
+                        <h2>CSDN</h2>
+                        <a target="_blank" href="https://blog.csdn.net/" target="_blank">View more</a>
+                    </figcaption>
+                </figure>
+                <div class="d-flex justify-content-between tm-text-gray">
+                    <span class="tm-text-gray-light">博客</span>
+                    <span>专业IT技术发表平台</span>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5 show">
+                <figure class="effect-ming tm-video-item">
+                    <img src="img/zhihu.jpg" alt="Image" class="img-fluid">
+                    <figcaption class="d-flex align-items-center justify-content-center">
+                        <h2>知乎</h2>
+                        <a target="_blank" href="https://www.zhihu.com/">View more</a>
+                    </figcaption>
+                </figure>
+                <div class="d-flex justify-content-between tm-text-gray">
+                    <span class="tm-text-gray-light">知乎</span>
+                    <span>高质量的问答社区</span>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5 show">
+                <figure class="effect-ming tm-video-item">
+                    <img src="img/jianshu.jpg" alt="Image" class="img-fluid">
+                    <figcaption class="d-flex align-items-center justify-content-center">
+                        <h2>简书</h2>
+                        <a target="_blank" href="https://www.jianshu.com/">View more</a>
+                    </figcaption>
+                </figure>
+                <div class="d-flex justify-content-between tm-text-gray">
+                    <span class="tm-text-gray-light">简书</span>
+                    <span>交流故事·沟通想法</span>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5 show">
+                <figure class="effect-ming tm-video-item">
+                    <img src="img/bilibili.jpg" alt="Image" class="img-fluid">
+                    <figcaption class="d-flex align-items-center justify-content-center">
+                        <h2>BiliBiLi</h2>
+                        <a target="_blank" href="https://www.bilibili.com/">View more</a>
+                    </figcaption>
+                </figure>
+                <div class="d-flex justify-content-between tm-text-gray">
+                    <span class="tm-text-gray-light">哔哩哔哩</span>
+                    <span>属于青年的学习平台</span>
+                </div>
+            </div>
+
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5 show">
+                <figure class="effect-ming tm-video-item">
+                    <img src="img/xxqg.jpg" alt="Image" class="img-fluid">
+                    <figcaption class="d-flex align-items-center justify-content-center">
+                        <h2>学习强国</h2>
+                        <a target="_blank" href="https://www.xuexi.cn/">View more</a>
+                    </figcaption>
+                </figure>
+                <div class="d-flex justify-content-between tm-text-gray">
+                    <span class="tm-text-gray-light">学习强国</span>
+                    <span>梦想从学习开始</span>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5 show">
+                <figure class="effect-ming tm-video-item">
+                    <img src="img/mooc.jpg" alt="Image" class="img-fluid">
+                    <figcaption class="d-flex align-items-center justify-content-center">
+                        <h2>中国大学 MooC</h2>
+                        <a target="_blank" href="https://www.icourse163.org/">View more</a>
+                    </figcaption>
+                </figure>
+                <div class="d-flex justify-content-between tm-text-gray">
+                    <span class="tm-text-gray-light">MooC</span>
+                    <span>国家精品课程在线学习</span>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5 show">
+                <figure class="effect-ming tm-video-item">
+                    <img src="img/cxey.jpg" alt="Image" class="img-fluid">
+                    <figcaption class="d-flex align-items-center justify-content-center">
+                        <h2>超星尔雅</h2>
+                        <a target="_blank" href="http://erya.mooc.chaoxing.com/">View more</a>
+                    </figcaption>
+                </figure>
+                <div class="d-flex justify-content-between tm-text-gray">
+                    <span class="tm-text-gray-light"><a target="_blank"
+                            href="http://passport2.chaoxing.com/login?fid=&refer=http://i.mooc.chaoxing.com"
+                            class="span_a">学习通</a></span>
+                    <span>高校学生管理平台</span>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5 show">
+                <figure class="effect-ming tm-video-item">
+                    <img src="img/yxy.jpg" alt="Image" class="img-fluid">
+                    <figcaption class="d-flex align-items-center justify-content-center">
+                        <h2>优学院</h2>
+                        <a target="_blank" href="https://www.ulearning.cn/portal/index.html#/index/portal">View more</a>
+                    </figcaption>
+                </figure>
+                <div class="d-flex justify-content-between tm-text-gray">
+                    <span class="tm-text-gray-light">优学院</span>
+                    <span>专业的移动教学平台</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Programming web site -->
+    <div class="container-fluid tm-container-content tm-mt-60 big">
+        <div class="row mb-4">
+            <h2 class="col-6 tm-text-primary" id="Program">
+                Programming web site
+            </h2>
+        </div>
+        <div class="row tm-mb-90 tm-gallery">
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5 show">
+                <figure class="effect-ming tm-video-item">
+                    <img src="img/python.jpg" alt="Image" class="img-fluid">
+                    <figcaption class="d-flex align-items-center justify-content-center">
+                        <h2>Python</h2>
+                        <a target="_blank" href="python.html">View more</a>
+                    </figcaption>
+                </figure>
+                <div class="d-flex justify-content-between tm-text-gray">
+                    <span class="tm-text-gray-light"><a target="_blank" href="https://www.w3school.com.cn/python/index.asp" class="span_a">Python教程</a></span>
+                    <span>数据分析-可视化</span>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5 show">
+                <figure class="effect-ming tm-video-item">
+                    <img src="img/html.jpg" alt="Image" class="img-fluid">
+                    <figcaption class="d-flex align-items-center justify-content-center">
+                        <h2>HTML</h2>
+                        <a target="_blank" href="https://baike.baidu.com/item/HTML/97049?fr=aladdin">View more</a>
+                    </figcaption>
+                </figure>
+                <div class="d-flex justify-content-between tm-text-gray">
+                    <span class="tm-text-gray-light"><a target="_blank" href="https://www.w3school.com.cn/html/index.asp" class="span_a">HTML教程</a></span>
+                    <span>超文本标记语言</span>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5 show">
+                <figure class="effect-ming tm-video-item">
+                    <img src="img/jsp.jpg" alt="Image" class="img-fluid">
+                    <figcaption class="d-flex align-items-center justify-content-center">
+                        <h2>Jsp</h2>
+                        <a target="_blank" href="https://baike.baidu.com/item/JSP/141543">View more</a>
+                    </figcaption>
+                </figure>
+                <div class="d-flex justify-content-between tm-text-gray">
+                    <span class="tm-text-gray-light"><a target="_blank" href="https://www.runoob.com/jsp/jsp-tutorial.html" class="span_a">Jsp教程</a></span>
+                    <span>动态网页技术</span>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5 show">
+                <figure class="effect-ming tm-video-item">
+                    <img src="img/sql.jpg" alt="Image" class="img-fluid">
+                    <figcaption class="d-flex align-items-center justify-content-center">
+                        <h2>SQL</h2>
+                        <a target="_blank" href="https://baike.baidu.com/item/%E7%BB%93%E6%9E%84%E5%8C%96%E6%9F%A5%E8%AF%A2%E8%AF%AD%E8%A8%80?fromtitle=sql&fromid=86007">View more</a>
+                    </figcaption>
+                </figure>
+                <div class="d-flex justify-content-between tm-text-gray">
+                    <span class="tm-text-gray-light"><a href="https://www.w3school.com.cn/sql/index.asp" target="_blank" class="span_a">SQL教程</a></span>
+                    <span>结构化查询语言</span>
+                </div>
+            </div>
+
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5 show">
+                <figure class="effect-ming tm-video-item">
+                    <img src="img/c.jpg" alt="Image" class="img-fluid">
+                    <figcaption class="d-flex align-items-center justify-content-center">
+                        <h2>C、C++</h2>
+                        <a target="_blank" href="https://baike.baidu.com/item/c%E8%AF%AD%E8%A8%80">View more</a>
+                    </figcaption>
+                </figure>
+                <div class="d-flex justify-content-between tm-text-gray">
+                    <span class="tm-text-gray-light"><a href="https://www.runoob.com/cprogramming/c-tutorial.html" target="_blank" class="span_a">C语言教程</a></span>
+                    <span>面向过程编程语言</span>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5 show">
+                <figure class="effect-ming tm-video-item">
+                    <img src="img/java.jpg" alt="Image" class="img-fluid">
+                    <figcaption class="d-flex align-items-center justify-content-center">
+                        <h2>Java</h2>
+                        <a target="_blank" href="https://baike.baidu.com/item/Java">View more</a>
+                    </figcaption>
+                </figure>
+                <div class="d-flex justify-content-between tm-text-gray">
+                    <span class="tm-text-gray-light"><a href="https://www.runoob.com/java/java-tutorial.html" target="_blank" class="span_a">Java教程</a></span>
+                    <span>面向对象编程语言</span>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5 show">
+                <figure class="effect-ming tm-video-item">
+                    <img src="img/php.jpg" alt="Image" class="img-fluid">
+                    <figcaption class="d-flex align-items-center justify-content-center">
+                        <h2>PHP</h2>
+                        <a target="_blank" href="https://baike.baidu.com/item/PHP">View more</a>
+                    </figcaption>
+                </figure>
+                <div class="d-flex justify-content-between tm-text-gray">
+                    <span class="tm-text-gray-light"><a href="https://www.w3school.com.cn/php/index.asp" target="_blank" class="span_a">PHP教程</a></a></span>
+                    <span>超文本预处理器</span>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5 show">
+                <figure class="effect-ming tm-video-item">
+                    <img src="img/js.jpg" alt="Image" class="img-fluid">
+                    <figcaption class="d-flex align-items-center justify-content-center">
+                        <h2>JS</h2>
+                        <a target="_blank" href="https://baike.baidu.com/item/javascript">View more</a>
+                    </figcaption>
+                </figure>
+                <div class="d-flex justify-content-between tm-text-gray">
+                    <span class="tm-text-gray-light"><a href="https://www.w3school.com.cn/js/index.asp" target="_blank" class="span_a">JS教程</a></span>
+                    <span>脚本编程语言</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Resources Navigation -->
+    <div class="container-fluid tm-container-content tm-mt-60 big">
+        <div class="row mb-4">
+            <h2 class="col-6 tm-text-primary" id="Resources">
+                Resources Navigation
+            </h2>
+        </div>
+        <div class="row tm-mb-90 tm-gallery">
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5 show">
+                <figure class="effect-ming tm-video-item">
+                    <img src="img/python.jpg" alt="Image" class="img-fluid">
+                    <figcaption class="d-flex align-items-center justify-content-center">
+                        <h2>Python</h2>
+                        <a target="_blank" href="python.html">View more</a>
+                    </figcaption>
+                </figure>
+                <div class="d-flex justify-content-between tm-text-gray">
+                    <span class="tm-text-gray-light"><a target="_blank" href="https://www.w3school.com.cn/python/index.asp" class="span_a">Python教程</a></span>
+                    <span>数据分析-可视化</span>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5 show">
+                <figure class="effect-ming tm-video-item">
+                    <img src="img/html.jpg" alt="Image" class="img-fluid">
+                    <figcaption class="d-flex align-items-center justify-content-center">
+                        <h2>HTML</h2>
+                        <a target="_blank" href="https://baike.baidu.com/item/HTML/97049?fr=aladdin">View more</a>
+                    </figcaption>
+                </figure>
+                <div class="d-flex justify-content-between tm-text-gray">
+                    <span class="tm-text-gray-light"><a target="_blank" href="https://www.w3school.com.cn/html/index.asp" class="span_a">HTML教程</a></span>
+                    <span>超文本标记语言</span>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5 show">
+                <figure class="effect-ming tm-video-item">
+                    <img src="img/jsp.jpg" alt="Image" class="img-fluid">
+                    <figcaption class="d-flex align-items-center justify-content-center">
+                        <h2>Jsp</h2>
+                        <a target="_blank" href="https://baike.baidu.com/item/JSP/141543">View more</a>
+                    </figcaption>
+                </figure>
+                <div class="d-flex justify-content-between tm-text-gray">
+                    <span class="tm-text-gray-light"><a target="_blank" href="https://www.runoob.com/jsp/jsp-tutorial.html" class="span_a">Jsp教程</a></span>
+                    <span>动态网页技术</span>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5 show">
+                <figure class="effect-ming tm-video-item">
+                    <img src="img/sql.jpg" alt="Image" class="img-fluid">
+                    <figcaption class="d-flex align-items-center justify-content-center">
+                        <h2>SQL</h2>
+                        <a target="_blank" href="https://baike.baidu.com/item/%E7%BB%93%E6%9E%84%E5%8C%96%E6%9F%A5%E8%AF%A2%E8%AF%AD%E8%A8%80?fromtitle=sql&fromid=86007">View more</a>
+                    </figcaption>
+                </figure>
+                <div class="d-flex justify-content-between tm-text-gray">
+                    <span class="tm-text-gray-light"><a href="https://www.w3school.com.cn/sql/index.asp" target="_blank" class="span_a">SQL教程</a></span>
+                    <span>结构化查询语言</span>
+                </div>
+            </div>
+
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5 show">
+                <figure class="effect-ming tm-video-item">
+                    <img src="img/c.jpg" alt="Image" class="img-fluid">
+                    <figcaption class="d-flex align-items-center justify-content-center">
+                        <h2>C、C++</h2>
+                        <a target="_blank" href="https://baike.baidu.com/item/c%E8%AF%AD%E8%A8%80">View more</a>
+                    </figcaption>
+                </figure>
+                <div class="d-flex justify-content-between tm-text-gray">
+                    <span class="tm-text-gray-light"><a href="https://www.runoob.com/cprogramming/c-tutorial.html" target="_blank" class="span_a">C语言教程</a></span>
+                    <span>面向过程编程语言</span>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5 show">
+                <figure class="effect-ming tm-video-item">
+                    <img src="img/java.jpg" alt="Image" class="img-fluid">
+                    <figcaption class="d-flex align-items-center justify-content-center">
+                        <h2>Java</h2>
+                        <a target="_blank" href="https://baike.baidu.com/item/Java">View more</a>
+                    </figcaption>
+                </figure>
+                <div class="d-flex justify-content-between tm-text-gray">
+                    <span class="tm-text-gray-light"><a href="https://www.runoob.com/java/java-tutorial.html" target="_blank" class="span_a">Java教程</a></span>
+                    <span>面向对象编程语言</span>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5 show">
+                <figure class="effect-ming tm-video-item">
+                    <img src="img/php.jpg" alt="Image" class="img-fluid">
+                    <figcaption class="d-flex align-items-center justify-content-center">
+                        <h2>PHP</h2>
+                        <a target="_blank" href="https://baike.baidu.com/item/PHP">View more</a>
+                    </figcaption>
+                </figure>
+                <div class="d-flex justify-content-between tm-text-gray">
+                    <span class="tm-text-gray-light"><a href="https://www.w3school.com.cn/php/index.asp" target="_blank" class="span_a">PHP教程</a></a></span>
+                    <span>超文本预处理器</span>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5 show">
+                <figure class="effect-ming tm-video-item">
+                    <img src="img/js.jpg" alt="Image" class="img-fluid">
+                    <figcaption class="d-flex align-items-center justify-content-center">
+                        <h2>JS</h2>
+                        <a target="_blank" href="https://baike.baidu.com/item/javascript">View more</a>
+                    </figcaption>
+                </figure>
+                <div class="d-flex justify-content-between tm-text-gray">
+                    <span class="tm-text-gray-light"><a href="https://www.w3school.com.cn/js/index.asp" target="_blank" class="span_a">JS教程</a></span>
+                    <span>脚本编程语言</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid tm-container-content tm-mt-60 big">
+        <div class="row mb-4">
+            <h2 class="col-6 tm-text-primary" id="Resources">
+                Programming web site
+            </h2>
+        </div>
+        <div class="row tm-mb-90 tm-gallery">
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5 show">
+                <figure class="effect-ming tm-video-item">
+                    <img src="img/python.jpg" alt="Image" class="img-fluid">
+                    <figcaption class="d-flex align-items-center justify-content-center">
+                        <h2>Python</h2>
+                        <a target="_blank" href="python.html">View more</a>
+                    </figcaption>
+                </figure>
+                <div class="d-flex justify-content-between tm-text-gray">
+                    <span class="tm-text-gray-light"><a target="_blank" href="https://www.w3school.com.cn/python/index.asp" class="span_a">Python教程</a></span>
+                    <span>数据分析-可视化</span>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5 show">
+                <figure class="effect-ming tm-video-item">
+                    <img src="img/html.jpg" alt="Image" class="img-fluid">
+                    <figcaption class="d-flex align-items-center justify-content-center">
+                        <h2>HTML</h2>
+                        <a target="_blank" href="https://baike.baidu.com/item/HTML/97049?fr=aladdin">View more</a>
+                    </figcaption>
+                </figure>
+                <div class="d-flex justify-content-between tm-text-gray">
+                    <span class="tm-text-gray-light"><a target="_blank" href="https://www.w3school.com.cn/html/index.asp" class="span_a">HTML教程</a></span>
+                    <span>超文本标记语言</span>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5 show">
+                <figure class="effect-ming tm-video-item">
+                    <img src="img/jsp.jpg" alt="Image" class="img-fluid">
+                    <figcaption class="d-flex align-items-center justify-content-center">
+                        <h2>Jsp</h2>
+                        <a target="_blank" href="https://baike.baidu.com/item/JSP/141543">View more</a>
+                    </figcaption>
+                </figure>
+                <div class="d-flex justify-content-between tm-text-gray">
+                    <span class="tm-text-gray-light"><a target="_blank" href="https://www.runoob.com/jsp/jsp-tutorial.html" class="span_a">Jsp教程</a></span>
+                    <span>动态网页技术</span>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5 show">
+                <figure class="effect-ming tm-video-item">
+                    <img src="img/sql.jpg" alt="Image" class="img-fluid">
+                    <figcaption class="d-flex align-items-center justify-content-center">
+                        <h2>SQL</h2>
+                        <a target="_blank" href="https://baike.baidu.com/item/%E7%BB%93%E6%9E%84%E5%8C%96%E6%9F%A5%E8%AF%A2%E8%AF%AD%E8%A8%80?fromtitle=sql&fromid=86007">View more</a>
+                    </figcaption>
+                </figure>
+                <div class="d-flex justify-content-between tm-text-gray">
+                    <span class="tm-text-gray-light"><a href="https://www.w3school.com.cn/sql/index.asp" target="_blank" class="span_a">SQL教程</a></span>
+                    <span>结构化查询语言</span>
+                </div>
+            </div>
+
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5 show">
+                <figure class="effect-ming tm-video-item">
+                    <img src="img/c.jpg" alt="Image" class="img-fluid">
+                    <figcaption class="d-flex align-items-center justify-content-center">
+                        <h2>C、C++</h2>
+                        <a target="_blank" href="https://baike.baidu.com/item/c%E8%AF%AD%E8%A8%80">View more</a>
+                    </figcaption>
+                </figure>
+                <div class="d-flex justify-content-between tm-text-gray">
+                    <span class="tm-text-gray-light"><a href="https://www.runoob.com/cprogramming/c-tutorial.html" target="_blank" class="span_a">C语言教程</a></span>
+                    <span>面向过程编程语言</span>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5 show">
+                <figure class="effect-ming tm-video-item">
+                    <img src="img/java.jpg" alt="Image" class="img-fluid">
+                    <figcaption class="d-flex align-items-center justify-content-center">
+                        <h2>Java</h2>
+                        <a target="_blank" href="https://baike.baidu.com/item/Java">View more</a>
+                    </figcaption>
+                </figure>
+                <div class="d-flex justify-content-between tm-text-gray">
+                    <span class="tm-text-gray-light"><a href="https://www.runoob.com/java/java-tutorial.html" target="_blank" class="span_a">Java教程</a></span>
+                    <span>面向对象编程语言</span>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5 show">
+                <figure class="effect-ming tm-video-item">
+                    <img src="img/php.jpg" alt="Image" class="img-fluid">
+                    <figcaption class="d-flex align-items-center justify-content-center">
+                        <h2>PHP</h2>
+                        <a target="_blank" href="https://baike.baidu.com/item/PHP">View more</a>
+                    </figcaption>
+                </figure>
+                <div class="d-flex justify-content-between tm-text-gray">
+                    <span class="tm-text-gray-light"><a href="https://www.w3school.com.cn/php/index.asp" target="_blank" class="span_a">PHP教程</a></a></span>
+                    <span>超文本预处理器</span>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5 show">
+                <figure class="effect-ming tm-video-item">
+                    <img src="img/js.jpg" alt="Image" class="img-fluid">
+                    <figcaption class="d-flex align-items-center justify-content-center">
+                        <h2>JS</h2>
+                        <a target="_blank" href="https://baike.baidu.com/item/javascript">View more</a>
+                    </figcaption>
+                </figure>
+                <div class="d-flex justify-content-between tm-text-gray">
+                    <span class="tm-text-gray-light"><a href="https://www.w3school.com.cn/js/index.asp" target="_blank" class="span_a">JS教程</a></span>
+                    <span>脚本编程语言</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid tm-container-content tm-mt-60 big">
+        <div class="row mb-4">
+            <h2 class="col-6 tm-text-primary" id="Resources">
+                Programming web site
+            </h2>
+        </div>
+        <div class="row tm-mb-90 tm-gallery">
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5 show">
+                <figure class="effect-ming tm-video-item">
+                    <img src="img/python.jpg" alt="Image" class="img-fluid">
+                    <figcaption class="d-flex align-items-center justify-content-center">
+                        <h2>Python</h2>
+                        <a target="_blank" href="python.html">View more</a>
+                    </figcaption>
+                </figure>
+                <div class="d-flex justify-content-between tm-text-gray">
+                    <span class="tm-text-gray-light"><a target="_blank" href="https://www.w3school.com.cn/python/index.asp" class="span_a">Python教程</a></span>
+                    <span>数据分析-可视化</span>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5 show">
+                <figure class="effect-ming tm-video-item">
+                    <img src="img/html.jpg" alt="Image" class="img-fluid">
+                    <figcaption class="d-flex align-items-center justify-content-center">
+                        <h2>HTML</h2>
+                        <a target="_blank" href="https://baike.baidu.com/item/HTML/97049?fr=aladdin">View more</a>
+                    </figcaption>
+                </figure>
+                <div class="d-flex justify-content-between tm-text-gray">
+                    <span class="tm-text-gray-light"><a target="_blank" href="https://www.w3school.com.cn/html/index.asp" class="span_a">HTML教程</a></span>
+                    <span>超文本标记语言</span>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5 show">
+                <figure class="effect-ming tm-video-item">
+                    <img src="img/jsp.jpg" alt="Image" class="img-fluid">
+                    <figcaption class="d-flex align-items-center justify-content-center">
+                        <h2>Jsp</h2>
+                        <a target="_blank" href="https://baike.baidu.com/item/JSP/141543">View more</a>
+                    </figcaption>
+                </figure>
+                <div class="d-flex justify-content-between tm-text-gray">
+                    <span class="tm-text-gray-light"><a target="_blank" href="https://www.runoob.com/jsp/jsp-tutorial.html" class="span_a">Jsp教程</a></span>
+                    <span>动态网页技术</span>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5 show">
+                <figure class="effect-ming tm-video-item">
+                    <img src="img/sql.jpg" alt="Image" class="img-fluid">
+                    <figcaption class="d-flex align-items-center justify-content-center">
+                        <h2>SQL</h2>
+                        <a target="_blank" href="https://baike.baidu.com/item/%E7%BB%93%E6%9E%84%E5%8C%96%E6%9F%A5%E8%AF%A2%E8%AF%AD%E8%A8%80?fromtitle=sql&fromid=86007">View more</a>
+                    </figcaption>
+                </figure>
+                <div class="d-flex justify-content-between tm-text-gray">
+                    <span class="tm-text-gray-light"><a href="https://www.w3school.com.cn/sql/index.asp" target="_blank" class="span_a">SQL教程</a></span>
+                    <span>结构化查询语言</span>
+                </div>
+            </div>
+
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5 show">
+                <figure class="effect-ming tm-video-item">
+                    <img src="img/c.jpg" alt="Image" class="img-fluid">
+                    <figcaption class="d-flex align-items-center justify-content-center">
+                        <h2>C、C++</h2>
+                        <a target="_blank" href="https://baike.baidu.com/item/c%E8%AF%AD%E8%A8%80">View more</a>
+                    </figcaption>
+                </figure>
+                <div class="d-flex justify-content-between tm-text-gray">
+                    <span class="tm-text-gray-light"><a href="https://www.runoob.com/cprogramming/c-tutorial.html" target="_blank" class="span_a">C语言教程</a></span>
+                    <span>面向过程编程语言</span>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5 show">
+                <figure class="effect-ming tm-video-item">
+                    <img src="img/java.jpg" alt="Image" class="img-fluid">
+                    <figcaption class="d-flex align-items-center justify-content-center">
+                        <h2>Java</h2>
+                        <a target="_blank" href="https://baike.baidu.com/item/Java">View more</a>
+                    </figcaption>
+                </figure>
+                <div class="d-flex justify-content-between tm-text-gray">
+                    <span class="tm-text-gray-light"><a href="https://www.runoob.com/java/java-tutorial.html" target="_blank" class="span_a">Java教程</a></span>
+                    <span>面向对象编程语言</span>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5 show">
+                <figure class="effect-ming tm-video-item">
+                    <img src="img/php.jpg" alt="Image" class="img-fluid">
+                    <figcaption class="d-flex align-items-center justify-content-center">
+                        <h2>PHP</h2>
+                        <a target="_blank" href="https://baike.baidu.com/item/PHP">View more</a>
+                    </figcaption>
+                </figure>
+                <div class="d-flex justify-content-between tm-text-gray">
+                    <span class="tm-text-gray-light"><a href="https://www.w3school.com.cn/php/index.asp" target="_blank" class="span_a">PHP教程</a></a></span>
+                    <span>超文本预处理器</span>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5 show">
+                <figure class="effect-ming tm-video-item">
+                    <img src="img/js.jpg" alt="Image" class="img-fluid">
+                    <figcaption class="d-flex align-items-center justify-content-center">
+                        <h2>JS</h2>
+                        <a target="_blank" href="https://baike.baidu.com/item/javascript">View more</a>
+                    </figcaption>
+                </figure>
+                <div class="d-flex justify-content-between tm-text-gray">
+                    <span class="tm-text-gray-light"><a href="https://www.w3school.com.cn/js/index.asp" target="_blank" class="span_a">JS教程</a></span>
+                    <span>脚本编程语言</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </main>
+    <script>
+        //点击锚链接，页面跳转到相应的部分
+		$('.navItems').click(function() {
+			var navto = $(this).attr('navTo');
+			if(navto != "#") {
+				var $div = $('#' + navto);
+				var top = $div.offset().top || 0;
+				$('html,body').animate({
+					'scroll-top': top - 70
+				}, 500);
+			} else {
+				$('html,body').animate({
+					'scroll-top': 0
+				}, 500);
+
+			}
+
+		});
+
+    </script>
+    
+</body>
+
+</html>
